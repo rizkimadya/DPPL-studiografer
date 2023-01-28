@@ -1,0 +1,55 @@
+* {
+    font-family: poppins;
+}
+
+#login {
+    contain: content;
+    margin-top: 4%;
+}
+
+#login .form {
+    align-self: center;
+}
+
+#login .form .title {
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 54px;
+    letter-spacing: 0em;
+    color: #8077c8;
+    text-align: center;
+}
+
+#login .form .keterangan {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #626262;
+    margin-bottom: 60px;
+}
+
+#login .form .input {
+    border: none;
+    border-radius: 4px;
+    border-left: 8px solid #8077c8;
+    background-color: #e8efff;
+    width: 100%;
+    padding: 16px 0px 16px 30px;
+    outline: none;
+}
+
+#login .form .btn-login {
+    background-color: #4e50fa;
+    border: none;
+    color: #fff;
+    font-weight: 600;
+    padding: 12px 40px;
+    border-radius: 4px;
+}
+
+#login .lupapass {
+    text-decoration: none;
+    color: #4e50fa;
+}
