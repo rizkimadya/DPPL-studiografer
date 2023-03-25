@@ -1,10 +1,13 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 
 * {
     font-family: poppins;
 }
+nav {
+    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.25);
+}
 .navbar ul {
-    gap: 12px;
+    gap: 10px;
 }
 .navbar ul li a {
     color: #4f5665;
@@ -56,36 +59,36 @@
     color: #4f5665;
 }
 
-#hero {
+#home {
     margin: 70px 0px;
 }
-#hero .title {
+#home .hero .title {
     font-size: 36px;
     font-weight: 600;
     color: #2f383c;
     margin-bottom: 20px;
 }
-#hero .title span {
+#home .hero .title span {
     display: block;
     color: #fd7262;
 }
-#hero .subtitle {
+#home .hero .subtitle {
     margin-bottom: 40px;
     color: #3f3f3f;
 }
-#hero .input-group {
+#home .hero .input-group {
     background-color: #fff;
     border: 1px solid #f1f1f1;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 55px;
 }
-#hero input {
+#home input {
     border-radius: 55px 0px 0px 55px;
     border-outline: none;
     border: none;
     padding: 20px 0px 20px 40px;
 }
-#hero .btn-cari {
+#home .btn-cari {
     background-color: #8ea3f6;
     align-self: center;
     border-radius: 55px;
@@ -94,6 +97,70 @@
     font-weight: 600;
     padding: 20px 57px;
 }
-#hero .btn-cari:hover {
+#home .btn-cari:hover {
     background-color: #7f93e0;
+}
+#home .jumlah {
+    margin: 100px 0px;
+}
+#home .jumlah .card {
+    border: none;
+}
+#home .jumlah img {
+    width: 55px;
+    height: 55px;
+}
+#home .jumlah .card p {
+    margin: 0;
+}
+#home .jumlah .angka {
+    color: #0b132a;
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 30px;
+}
+#home .jumlah .keterangan {
+    color: #4f5665;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 30px;
+}
+#home .jumlah .bor {
+    border-right: 2px solid #eeeff2;
+}
+
+.about .title {
+    color: #0b132a;
+    font-size: 35px;
+    font-weight: 500;
+    line-height: 50px;
+}
+.about .subtitle {
+    font-size: 16px;
+    font-weight: 400;
+    color: #4f5665;
+    line-height: 30px;
+}
+.about .layanan p {
+    color: #4f5665;
+    font-size: 14px;
+    font-weight: 400;
+    align-self: center;
+}
+.paket {
+    background-color: #fbfbfb;
+    margin: 80px 0px;
+    padding: 80px 0px;
+}
+.paket .title {
+    font-size: 35px;
+    font-weight: 500;
+    margin-bottom: 6px;
+    color: #0b132a;
+}
+.paket .subtitle {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 30px;
+    color: #4f5665;
 }

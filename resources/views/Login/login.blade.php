@@ -47,17 +47,7 @@
                             <input type="password" class="form-input input" name="password"
                                 placeholder="Masukkan Password">
                         </div>
-                        <div class="mb-4 form-check d-flex">
-                            <div>
-                                <input type="checkbox" class="form-check-input" style="background-color: #d2d8dd
-;"
-                                    id="exampleCheck1">
-                                <label class="form-check-label" for="exampleCheck1">Remember me</label>
-                            </div>
-                            <div class="ms-auto">
-                                <a href="#" class="lupapass">forget to password?</a>
-                            </div>
-                        </div>
+                        
                         <div class="mb-5 d-flex justify-content-end">
                             <button class="btn-login">Login</button>
                         </div>
