@@ -69,12 +69,6 @@
 
                  <li class="nav-item mb-2">
                      <a class="nav-link" href="">
-                         <i class="ni ni-laptop text-success mb-1"></i> Studio Foto
-                     </a>
-                 </li>
-
-                 <li class="nav-item mb-2">
-                     <a class="nav-link" href="">
                          <i class="ni ni-camera-compact text-warning mb-1"></i> Fotografer
                      </a>
                  </li>
@@ -82,6 +76,12 @@
                  <li class="nav-item mb-2">
                      <a class="nav-link" href="">
                          <i class="ni ni-single-02 text-yellow mb-1"></i> Pengguna
+                     </a>
+                 </li>
+
+                 <li class="nav-item mb-2">
+                     <a class="nav-link" href="">
+                         <i class="ni ni-money-coins text-success mb-1"></i> Transaksi
                      </a>
                  </li>
 

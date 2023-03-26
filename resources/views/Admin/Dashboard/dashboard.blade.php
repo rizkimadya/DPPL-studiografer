@@ -39,7 +39,7 @@
                                 </div>
                             </div>
                             <p class="mt-3 mb-0 text-muted text-sm">
-                                <span class="text-nowrap">Studio dan Fotografer</span>
+                                <span class="text-nowrap">Fotografer</span>
                             </p>
                         </div>
                     </div>
