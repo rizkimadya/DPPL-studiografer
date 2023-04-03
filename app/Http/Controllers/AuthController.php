@@ -13,6 +13,21 @@ class AuthController extends Controller
 
     public function login()
     {
-        return view('');
+        return view('Auth.login');
+    }
+
+    public function pilihanRegis()
+    {
+        return view('Auth.pilihan');
+    }
+
+    public function regisPengguna()
+    {
+        return view('Auth.regisPengguna');
+    }
+
+    public function regisFotografer()
+    {
+        return view('Auth.regisFotografer');
     }
 }

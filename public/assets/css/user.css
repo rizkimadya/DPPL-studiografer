@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 
 * {
     font-family: poppins;
@@ -30,13 +30,10 @@ nav {
     background-color: #7f93e0;
     color: #fff;
 }
-.main-content {
-    padding-top: 120px;
-}
-#footer {
+/* #footer {
     background-color: #fff;
     color: #fff;
-    /* box-shadow:0px 0px 10px rgba(0, 0, 0, 0.15); */
+    box-shadow:0px 0px 10px rgba(0, 0, 0, 0.15);
     padding: 40px 0px 10px 0px;
 }
 #footer .title {
@@ -163,4 +160,114 @@ nav {
     font-weight: 400;
     line-height: 30px;
     color: #4f5665;
+} */
+
+/* content */
+.main-content {
+    padding-top: 66px;
+}
+.main-content .card-main {
+    border: none;
+    background-color: #fff;
+    height: 100vh;
+    padding: 30px 40px;
+    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.25);
+}
+.main-content .title {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 0;
+    color: #4f5665;
+}
+.main-content .subtitle {
+    font-size: 14px;
+    font-weight: 400;
+    color: #7f7d7d;
+}
+
+/* form */
+.main-content form label {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 21px;
+    color: #738599;
+}
+.main-content .input-groups {
+    display: flex;
+    border: 1px solid #9fadbc;
+    border-radius: 12px;
+}
+.main-content form .input-groups i {
+    width: 24px;
+    padding: 0px 18px;
+    color: #9fadbc;
+    align-self: center;
+}
+.main-content form input {
+    border: none;
+    border-radius: 12px;
+    padding: 14px;
+    width: 100%;
+    font-size: 14px;
+    color: #9fadbc;
+    outline: none;
+}
+.main-content form input::placeholder {
+    font-family: Poppins;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 21px;
+    color: #9fadbc;
+}
+.main-content .btn-login {
+    color: #fff;
+    background-color: #8ea3f6;
+    padding: 14px 80px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 21px;
+}
+
+.main-content .text-daftar {
+    text-align: center;
+    color: #738599;
+    margin-top: 8%;
+}
+.main-content .text-daftar a {
+    color: #8ea3f6;
+    font-weight: 600;
+}
+.main-content .btn-pilihan i {
+    font-size: 14px;
+    color: #4f5665;
+    padding: 10px;
+    font-weight: 400;
+}
+.main-content .btn-daftar {
+    background-color: #8ea3f6;
+    color: #fff;
+    display: block;
+    padding: 14px 0px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 21px;
+}
+.main-content .btn:hover {
+    border: 1px solid #8ea3f6;
+    color: #8ea3f6;
+}
+
+@media (max-width: 767.98px) {
+    .main-content {
+        contain: content;
+    }
+    .main-content .container {
+        --bs-gutter-x: 0;
+    }
+    .main-content .card-main {
+        padding: 20px 30px;
+        border: none;
+        background-color: #fff;
+        box-shadow: none;
+    }
 }

@@ -13,14 +13,20 @@
 
 <body>
     <div id="app">
-        {{-- navbar --}}
-        @include('Layouts.User.navbar')
+        {{-- header --}}
+        @include('Layouts.User.header')
         {{-- main content --}}
-        <div class="main-content">
-            @yield('content')
+        <div class="main-content" style="background-color: #F8F9FE;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 mx-auto">
+                        @yield('content')
+                    </div>
+                </div>
+            </div>
         </div>
         {{-- footer --}}
-        @include('Layouts.User.footer')
+        {{-- @include('Layouts.User.footer') --}}
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
