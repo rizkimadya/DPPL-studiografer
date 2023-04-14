@@ -4,12 +4,11 @@
             <div class="col-4">
                 <p class="title">Studio Grafer</p>
                 <div>
-                    <a href="" class="d-block mb-3"><i class="bi bi-house-door-fill me-1"></i> Home</a>
-                    <a href="" class="d-block mb-3"><i class="bi bi-dash-square-fill me-1"></i> About</a>
-                    <a href="" class="d-block mb-3"><i class="bi bi-camera-reels-fill me-1"></i> All studio</a>
-                    <a href="" class="d-block mb-3"><i class="bi bi-telegram me-1"></i> Contact us</a>
+                    <a href="#beranda" class="d-block mb-3"><i class="bi bi-house-door-fill me-1"></i> Beranda</a>
+                    <a href="#tentang" class="d-block mb-3"><i class="bi bi-dash-square-fill me-1"></i> Tentang</a>
+                    <a href="" class="d-block mb-3"><i class="bi bi-camera-reels-fill me-1"></i> Paket Foto</a>
+                    <a href="" class="d-block mb-3"><i class="bi bi-telegram me-1"></i> Momen Foto</a>
                     <a href="" class="d-block mb-3"><i class="bi bi-quote"></i> Testimonials</a>
-                    <a href="" class="d-block mb-3"><i class="bi bi-credit-card-2-front-fill me-1"></i> Promo</a>
                 </div>
             </div>
             <div class="col-4">

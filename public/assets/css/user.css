@@ -30,33 +30,9 @@ nav {
     background-color: #7f93e0;
     color: #fff;
 }
-/* #footer {
-    background-color: #fff;
-    color: #fff;
-    box-shadow:0px 0px 10px rgba(0, 0, 0, 0.15);
-    padding: 40px 0px 10px 0px;
-}
-#footer .title {
-    margin-bottom: 28px;
-    font-size: 24px;
-    font-weight: 600;
-    color: #8ea3f6;
-}
-#footer a {
-    text-decoration: none;
-    color: #4f5665;
-    transition: all ease-in-out 0.3s;
-}
-#footer a:hover {
-    transition: all ease-in-out 0.3s;
-    text-decoration: none;
-    color: #8ea3f6;
-}
-#footer .copyright {
-    color: #4f5665;
-}
 
-#home {
+
+/*#home {
     margin: 70px 0px;
 }
 #home .hero .title {
@@ -169,7 +145,7 @@ nav {
 .main-content .card-main {
     border: none;
     background-color: #fff;
-    height: 100vh;
+    height: 100vh auto;
     padding: 30px 40px;
     box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.25);
 }

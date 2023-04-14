@@ -38,7 +38,8 @@
                 <label for="lokasi" class="form-label">Lokasi Agency</label>
                 <div class="input-groups">
                     <i class="bi bi-pin-map-fill"></i>
-                    <input type="text" id="lokasi" name="lokasi" placeholder="Masukkan link lokasi Studio/Fotografer">
+                    <input type="text" id="lokasi" name="lokasi"
+                        placeholder="Masukkan link lokasi Studio/Fotografer">
                 </div>
             </div>
             <div class="mb-3">
