@@ -104,6 +104,35 @@ nav .btn-masuk {
     font-weight: 400;
     color: #7f7d7d;
 }
+#paket .btn-detail {
+    color: #fff;
+    margin-top: 40px;
+    background-color: #8ea3f6;
+    padding: 10px 50px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 21px;
+}
+#paket .card p {
+    margin: 0;
+}
+#paket .card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+#paket .card .jenis-paket {
+    font-size: 16px;
+    color: #4f5665;
+    font-weight: 400;
+    text-align: center;
+}
+#paket .card .harga-paket {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 30px;
+}
 
 #momen {
     background-color: #fff;
@@ -135,7 +164,6 @@ nav .btn-masuk {
     font-weight: 400;
     color: #7f7d7d;
 }
-
 
 #footer {
     background-color: #fff;

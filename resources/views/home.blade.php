@@ -126,19 +126,28 @@
             </div>
 
             <div class="row mt-5">
-                <div class="col-md-4">
-                    <div class="card">
-
+                <div class="col-md-4 col-sm-6 mb-3">
+                    <div class="card p-3">
+                        <img src="{{ asset('assets/img/bgheroo.png') }}" alt="">
+                        <p class="jenis-paket">Paket Pernikahan</p>
+                        <p class="harga-paket">Rp. 100.000</p>
+                        <a href="#" class="btn btn-detail">Lihat Detail</a>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="card">
-
+                <div class="col-md-4 col-sm-6 mb-3">
+                    <div class="card p-3">
+                        <img src="{{ asset('assets/img/bgheroo.png') }}" alt="">
+                        <p class="jenis-paket">Paket Pernikahan</p>
+                        <p class="harga-paket">Rp. 100.000</p>
+                        <a href="#" class="btn btn-detail">Lihat Detail</a>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="card">
-
+                <div class="col-md-4 col-sm-6 mb-3">
+                    <div class="card p-3">
+                        <img src="{{ asset('assets/img/bgheroo.png') }}" alt="">
+                        <p class="jenis-paket">Paket Pernikahan</p>
+                        <p class="harga-paket">Rp. 100.000</p>
+                        <a href="#" class="btn btn-detail">Lihat Detail</a>
                     </div>
                 </div>
             </div>
@@ -192,7 +201,8 @@
                 <div class="col-4">
                     <p class="title">Sosial Media</p>
                     <div>
-                        <a href="" class="d-block mb-3"><i class="bi bi-instagram me-1"></i> Studiografer.id</a>
+                        <a href="" class="d-block mb-3"><i class="bi bi-instagram me-1"></i>
+                            Studiografer.id</a>
                         <a href="" class="d-block mb-3"><i class="bi bi-envelope me-1"></i>
                             Email@gmail.com</a>
                         <a href="" class="d-block mb-3"><i class="bi bi-whatsapp me-1"></i> +628236831592</a>
