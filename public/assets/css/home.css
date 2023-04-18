@@ -149,6 +149,11 @@ nav .btn-masuk {
     font-size: 16px;
     font-weight: 400;
 }
+#momen .carousel img {
+    width: 500px;
+    height: 360px;
+    object-fit: cover;
+}
 
 #testimoni {
     padding: 80px 0px;
@@ -163,6 +168,38 @@ nav .btn-masuk {
     font-size: 16px;
     font-weight: 400;
     color: #7f7d7d;
+}
+#testimoni .card {
+    padding: 20px;
+}
+#testimoni .carousel .card {
+    width: 400px;
+    margin-right: 20px;
+}
+#testimoni .carousel .flickity-page-dots .dot {
+    background-color: #8ea3f6;
+}
+#testimoni .carousel .previous svg .arrow {
+    color: #8ea3f6;
+}
+#testimoni .carousel .next svg .arrow {
+    color: #8ea3f6;
+}
+#testimoni .carousel img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+#testimoni .nama {
+    color: #0b132a;
+    font-size: 16px;
+    font-weight: 600;
+}
+#testimoni .studio {
+    color: #4f5665;
+    font-size: 14px;
+    font-weight: 400;
 }
 
 #footer {

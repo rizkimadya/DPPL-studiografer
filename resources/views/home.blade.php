@@ -10,6 +10,9 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
 </head>
 
+
+<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css" />
+
 <link rel="stylesheet" href="{{ asset('assets/css/home.css') }}">
 
 <body>
@@ -158,10 +161,30 @@
     {{-- momen foto --}}
     <section id="momen">
         <div class="container">
-            <div class="row">
+            <div class="row mb-5">
                 <div class="col-12">
                     <p class="title">Momen Foto</p>
                     <p class="subtitle">Potretan momen foto dari studiografer</p>
+                </div>
+            </div>
+            <div class="carousel" data-flickity='{ "groupCells": true }'>
+                <div class="carousel-cell">
+                    <img src="{{ asset('assets/img/bgheroo.png') }}" alt="">
+                </div>
+                <div class="carousel-cell">
+                    <img src="{{ asset('assets/img/bgheroo.png') }}" alt="">
+                </div>
+                <div class="carousel-cell">
+                    <img src="{{ asset('assets/img/bgheroo.png') }}" alt="">
+                </div>
+                <div class="carousel-cell">
+                    <img src="{{ asset('assets/img/bgheroo.png') }}" alt="">
+                </div>
+                <div class="carousel-cell">
+                    <img src="{{ asset('assets/img/bgheroo.png') }}" alt="">
+                </div>
+                <div class="carousel-cell">
+                    <img src="{{ asset('assets/img/bgheroo.png') }}" alt="">
                 </div>
             </div>
         </div>
@@ -171,10 +194,76 @@
     {{-- testimoni --}}
     <section id="testimoni">
         <div class="container">
-            <div class="row">
+            <div class="row mb-5">
                 <div class="col-12">
                     <p class="title">Testimoni</p>
                     <p class="subtitle">Apa kata pengguna Studiografer</p>
+                </div>
+            </div>
+            <div class="carousel" data-flickity='{ "groupCells": true }'>
+                <div class="carousel-cell">
+                    <div class="card">
+                        <div class="d-flex">
+                            <img src="{{ asset('assets/img/bgheroo.png') }}" alt="">
+                            <div class="ms-3 align-self-center mb-4">
+                                <p class="mb-0 nama">Nama User</p>
+                                <p class="studio mb-0">Studio Tujuan</p>
+                            </div>
+                            <div class="ms-auto align-self-center d-flex">
+                                <p class="me-2">4,5</p>
+                                <i class="bi bi-star-fill text-warning"></i>
+                            </div>
+                        </div>
+                        <p>"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius, neque."</p>
+                    </div>
+                </div>
+                <div class="carousel-cell">
+                    <div class="card">
+                        <div class="d-flex">
+                            <img src="{{ asset('assets/img/bgheroo.png') }}" alt="">
+                            <div class="ms-3 align-self-center mb-4">
+                                <p class="mb-0 nama">Nama User</p>
+                                <p class="studio mb-0">Studio Tujuan</p>
+                            </div>
+                            <div class="ms-auto align-self-center d-flex">
+                                <p class="me-2">4,5</p>
+                                <i class="bi bi-star-fill text-warning"></i>
+                            </div>
+                        </div>
+                        <p>"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius, neque."</p>
+                    </div>
+                </div>
+                <div class="carousel-cell">
+                    <div class="card">
+                        <div class="d-flex">
+                            <img src="{{ asset('assets/img/bgheroo.png') }}" alt="">
+                            <div class="ms-3 align-self-center mb-4">
+                                <p class="mb-0 nama">Nama User</p>
+                                <p class="studio mb-0">Studio Tujuan</p>
+                            </div>
+                            <div class="ms-auto align-self-center d-flex">
+                                <p class="me-2">4,5</p>
+                                <i class="bi bi-star-fill text-warning"></i>
+                            </div>
+                        </div>
+                        <p>"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius, neque."</p>
+                    </div>
+                </div>
+                <div class="carousel-cell">
+                    <div class="card">
+                        <div class="d-flex">
+                            <img src="{{ asset('assets/img/bgheroo.png') }}" alt="">
+                            <div class="ms-3 align-self-center mb-4">
+                                <p class="mb-0 nama">Nama User</p>
+                                <p class="studio mb-0">Studio Tujuan</p>
+                            </div>
+                            <div class="ms-auto align-self-center d-flex">
+                                <p class="me-2">4,5</p>
+                                <i class="bi bi-star-fill text-warning"></i>
+                            </div>
+                        </div>
+                        <p>"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius, neque."</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -232,7 +321,7 @@
         </div>
     </section>
 
-
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous">
