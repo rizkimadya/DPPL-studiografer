@@ -59,7 +59,7 @@
     <section id="beranda">
         <div class="container">
             <div class="row">
-                <div class="col-md-6 align-self-center">
+                <div class="col-md-6 align-self-center order-md-0 order-2">
                     <p class="title">Layanan Booking Fotografer dan Studio Foto
                     </p>
                     <p class="subtitle">Hal terbaik mengenai sebuah gambar adalah gambar itu tidak pernah berubah,
@@ -274,7 +274,7 @@
     <section id="footer">
         <div class="container">
             <div class="row">
-                <div class="col-4">
+                <div class="col-md-4">
                     <p class="title">Studio Grafer</p>
                     <div>
                         <a href="#beranda" class="d-block mb-3"><i class="bi bi-house-door-fill me-1"></i>
@@ -287,7 +287,7 @@
                         <a href="#testimoni" class="d-block mb-3"><i class="bi bi-quote"></i> Testimoni</a>
                     </div>
                 </div>
-                <div class="col-4">
+                <div class="col-md-4">
                     <p class="title">Sosial Media</p>
                     <div>
                         <a href="" class="d-block mb-3"><i class="bi bi-instagram me-1"></i>
@@ -300,7 +300,7 @@
                             Studiografer.ac.id</a>
                     </div>
                 </div>
-                <div class="col-4">
+                <div class="col-md-4">
                     <p class="title">Lokasi</p>
                     <div>
                         <iframe

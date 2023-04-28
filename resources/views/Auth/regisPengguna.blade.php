@@ -1,10 +1,12 @@
 @extends('Layouts.User.app', ['title' => 'Halaman Registrasi Pengguna'])
 
 @section('content')
-    <div class="card-main" >
+    <div class="card-main">
         <p class="title mb-md-5 mb-4">Registrasi Pengguna</p>
-     
-        <form action="" method="POST">
+
+        <form action="{{ route('pengguna.auth') }}" method="POST">
+            @csrf
+            <input type="text" name="roles" value="pengguna" hidden>
             <div class="mb-3">
                 <label for="email" class="form-label">Email Address</label>
                 <div class="input-groups">
@@ -33,7 +35,7 @@
                     <input type="password" id="password" name="password" placeholder="Masukkan Password">
                 </div>
             </div>
-            <button class="btn btn-login w-100 mt-3">Daftar</button>
+            <button type="submit" class="btn btn-login w-100 mt-3">Daftar</button>
         </form>
     </div>
 @endsection

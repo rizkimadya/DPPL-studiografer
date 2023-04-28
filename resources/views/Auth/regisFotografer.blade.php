@@ -4,7 +4,9 @@
     <div class="card-main">
         <p class="title mb-md-5 mb-4">Registrasi Fotografer</p>
 
-        <form action="" method="POST">
+        <form action="{{ route('fotografer.auth') }}" method="POST" enctype="multipart/form-data">
+            @csrf
+            <input type="text" name="roles" value="fotografer" hidden>
             <div class="mb-3">
                 <label for="email" class="form-label">Email Agency</label>
                 <div class="input-groups">
@@ -21,25 +23,10 @@
                 </div>
             </div>
             <div class="mb-3">
-                <label for="no_wa" class="form-label">Nomor Whatsapp </label>
+                <label for="no_wa" class="form-label">Nomor Whatsapp</label>
                 <div class="input-groups">
                     <i class="bi bi-whatsapp"></i>
                     <input type="number" id="no_wa" name="no_wa" placeholder="Masukkan nomor whatsapp">
-                </div>
-            </div>
-            <div class="mb-3">
-                <label for="surat_izin" class="form-label">Surat Izin Pendirian Usaha</label>
-                <div class="input-groups">
-                    <i class="bi bi-file-earmark-pdf-fill"></i>
-                    <input type="file" id="surat_izin" name="surat_izin">
-                </div>
-            </div>
-            <div class="mb-3">
-                <label for="lokasi" class="form-label">Lokasi Agency</label>
-                <div class="input-groups">
-                    <i class="bi bi-pin-map-fill"></i>
-                    <input type="text" id="lokasi" name="lokasi"
-                        placeholder="Masukkan link lokasi Studio/Fotografer">
                 </div>
             </div>
             <div class="mb-3">
@@ -49,7 +36,28 @@
                     <input type="password" id="password" name="password" placeholder="Masukkan Password">
                 </div>
             </div>
-            <button class="btn btn-login w-100 mt-3">Daftar</button>
+            <div class="mb-3">
+                <label for="alamat" class="form-label">Alamat Agency</label>
+                <div class="input-groups">
+                    <i class="bi bi-pin-map-fill"></i>
+                    <input type="text" id="alamat" name="alamat" placeholder="Masukkan alamat Studio/Fotografer">
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="logo" class="form-label">Logo Agency/Fotografer</label>
+                <div class="input-groups">
+                    <i class="bi bi-file-earmark-image"></i>
+                    <input type="file" id="logo" name="logo">
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="surat_izin" class="form-label">Surat Izin Pendirian Usaha</label>
+                <div class="input-groups">
+                    <i class="bi bi-file-earmark-pdf-fill"></i>
+                    <input type="file" id="surat_izin" name="surat_izin">
+                </div>
+            </div>
+            <button type="submit" class="btn btn-login w-100 mt-3">Daftar</button>
         </form>
     </div>
 @endsection

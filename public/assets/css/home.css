@@ -227,3 +227,16 @@ nav .btn-masuk {
 #footer .copyright {
     color: #4f5665;
 }
+
+@media (max-width: 768px) {
+    #beranda {
+        margin-top: 0px;
+    }
+    #beranda img {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    #testimoni .carousel .carousel-cell .card {
+        width: 100%;
+    }
+}

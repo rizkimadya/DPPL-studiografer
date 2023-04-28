@@ -2,7 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 
 class AuthController extends Controller
 {
@@ -25,9 +29,81 @@ class AuthController extends Controller
     {
         return view('Auth.regisPengguna');
     }
+    public function regisPenggunaAuth(Request $request)
+    {
+        $data = new User();
+
+        $data->roles = $request->roles;
+        $data->email = $request->email;
+        $data->nama_lengkap = $request->nama_lengkap;
+        $data->no_wa = $request->no_wa;
+        $data->password = Hash::make($request->password);
+
+        $user = $data;
+
+        $user->save();
+        return redirect('/login');
+    }
 
     public function regisFotografer()
     {
         return view('Auth.regisFotografer');
+    }
+    public function regisFotograferAuth(Request $request)
+    {
+        $data = new User();
+
+        $data->roles = $request->roles;
+        $data->email = $request->email;
+        $data->nama_lengkap = $request->nama_lengkap;
+        $data->no_wa = $request->no_wa;
+        $data->password = Hash::make($request->password);
+        $data->alamat = $request->alamat;
+        $data->logo = $request->logo;
+        $data->surat_izin = $request->surat_izin;
+
+        $user = $data;
+
+        $dir = 'File Fotografer/' . $request->nama_lengkap;
+        $path = $request
+            ->file('logo')
+            ->storePubliclyAs($dir, "logo.{$request->file('logo')->extension()}");
+        $user->logo = Str::of($path)->replace('public', 'storage')->toString();
+
+        $dir = 'File Fotografer/' . $request->nama_lengkap;
+        $path = $request
+            ->file('surat_izin')
+            ->storePubliclyAs($dir, "surat_izin.{$request->file('surat_izin')->extension()}");
+        $user->surat_izin = Str::of($path)->replace('public', 'storage')->toString();
+
+        $user->save();
+        return redirect('/login');
+    }
+
+    public function loginAuth(Request $request)
+    {
+        $request->validate([
+            'email' => 'required',
+            'password' => 'required',
+        ]);
+        if (Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
+            if (auth()->user()->roles == 'admin') {
+                return redirect()->route('dashboard-admin');
+                return view('home')->with('users', $request);
+            } else {
+                if (auth()->user()->roles == 'fotografer' && auth()->user()->is_verification == 1) {
+                    return redirect()->route('dashboard-fotografer');
+                    return view('home')->with('users', $request);
+                } else if (auth()->user()->roles == 'user' && auth()->user()->is_verification == 1) {
+                    return redirect()->route('halaman-user');
+                    return view('home')->with('users', $request);
+                } else {
+                    return back()->with('wait', 'akun anda belum di verifikasi oleh admin');
+                }
+            }
+        }
+        return back()->withErrors([
+            'password' => 'Email atau Password anda salah',
+        ]);
     }
 }

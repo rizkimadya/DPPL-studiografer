@@ -5,9 +5,23 @@
         <p class="title">Selamat datang,</p>
         <p class="subtitle">Masuk dan pilih paket foto sesuai keinginan anda</p>
 
-        <img loading="lazy" class="d-block mx-auto my-4" src="{{ asset('assets/img/img-login.png') }}" alt="" width="290px">
+        <img loading="lazy" class="d-block mx-auto my-4" src="{{ asset('assets/img/img-login.png') }}" alt=""
+            width="290px">
 
-        <form action="" method="POST">
+        @if (session('success'))
+            <p class="alert alert-success">{{ session('success') }}</p>
+        @endif
+        @if (session('wait'))
+            <p class="alert alert-danger">{{ session('wait') }}</p>
+        @endif
+        @if ($errors->any())
+            @foreach ($errors->all() as $err)
+                <p class="alert alert-danger">{{ $err }}</p>
+            @endforeach
+        @endif
+
+        <form action="{{ route('login.auth') }}" method="POST">
+            @csrf
             <div class="mb-3">
                 <label for="email" class="form-label">Email Address</label>
                 <div class="input-groups">

@@ -16,8 +16,11 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [AuthController::class, 'home'])->name('home');
 Route::get('/login', [AuthController::class, 'login'])->name('login');
-Route::post('/login', [AuthController::class, 'login_auth'])->name('login.auth');
+Route::post('/login', [AuthController::class, 'loginAuth'])->name('login.auth');
 
 Route::get('/pilihanregis', [AuthController::class, 'pilihanRegis'])->name('pilihan.regis');
 Route::get('/regispengguna', [AuthController::class, 'regisPengguna'])->name('regis.pengguna');
+Route::post('/regispengguna', [AuthController::class, 'regisPenggunaAuth'])->name('pengguna.auth');
 Route::get('/regisfotografer', [AuthController::class, 'regisFotografer'])->name('regis.fotografer');
+Route::post('/regisfotografer', [AuthController::class, 'regisFotograferAuth'])->name('fotografer.auth');
+
