@@ -56,7 +56,8 @@
              <!-- Navigation -->
              <ul class="navbar-nav">
                  <li class="nav-item mb-2">
-                     <a class="nav-link {{ $title == 'Dashboard Admin' ? 'active' : '' }}" href="">
+                     <a class="nav-link {{ $title == 'Dashboard Admin' ? 'active' : '' }}"
+                         href="{{ route('dashboard-admin') }}">
                          <i class="ni ni-ruler-pencil text-primary mb-1"></i> Dashboard
                      </a>
                  </li>
@@ -68,13 +69,15 @@
                  </li>
 
                  <li class="nav-item mb-2">
-                     <a class="nav-link" href="">
+                     <a class="nav-link {{ $title == 'Data Fotografer' ? 'active' : '' }}"
+                         href="{{ route('datafotografer.index') }}">
                          <i class="ni ni-camera-compact text-warning mb-1"></i> Fotografer
                      </a>
                  </li>
 
                  <li class="nav-item mb-2">
-                     <a class="nav-link" href="">
+                     <a class="nav-link {{ $title == 'Data Pengguna' ? 'active' : '' }}"
+                         href="{{ route('datapengguna.index') }}" href="{{ route('datapengguna.index') }}">
                          <i class="ni ni-single-02 text-yellow mb-1"></i> Pengguna
                      </a>
                  </li>

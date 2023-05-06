@@ -15,6 +15,21 @@ class AuthController extends Controller
         return view('home');
     }
 
+    public function dashboard_admin()
+    {
+        return view('Admin.Dashboard.dashboard');
+    }
+
+    public function dashboard_fotografer()
+    {
+        return view('Fotografer.Dashboard.dashboard');
+    }
+
+    public function halaman_user()
+    {
+        return view('User.Home.home');
+    }
+
     public function login()
     {
         return view('Auth.login');
@@ -89,14 +104,14 @@ class AuthController extends Controller
         if (Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
             if (auth()->user()->roles == 'admin') {
                 return redirect()->route('dashboard-admin');
-                return view('home')->with('users', $request);
+                return view('Admin.Dashboard.dashboard')->with('users', $request);
             } else {
                 if (auth()->user()->roles == 'fotografer' && auth()->user()->is_verification == 1) {
                     return redirect()->route('dashboard-fotografer');
-                    return view('home')->with('users', $request);
+                    return view('Fotografer.Dashboard.dashboard')->with('users', $request);
                 } else if (auth()->user()->roles == 'user' && auth()->user()->is_verification == 1) {
                     return redirect()->route('halaman-user');
-                    return view('home')->with('users', $request);
+                    return view('User.Home.home')->with('users', $request);
                 } else {
                     return back()->with('wait', 'akun anda belum di verifikasi oleh admin');
                 }
