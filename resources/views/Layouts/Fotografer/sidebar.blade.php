@@ -56,36 +56,19 @@
              <!-- Navigation -->
              <ul class="navbar-nav">
                  <li class="nav-item mb-2">
-                     <a class="nav-link {{ $title == 'Dashboard Admin' ? 'active' : '' }}"
-                         href="{{ route('dashboard-admin') }}">
+                     <a class="nav-link {{ $title == 'Dashboard Fotografer' ? 'active' : '' }}" href="">
                          <i class="ni ni-ruler-pencil text-primary mb-1"></i> Dashboard
                      </a>
                  </li>
 
                  <li class="nav-item mb-2">
-                     <a class="nav-link {{ $title == 'Data Paket Foto' ? 'active' : '' }}"
-                         href="{{ route('datapaketfoto.index') }}">
+                     <a class="nav-link {{ $title == 'Data Paket Foto' ? 'active' : '' }}" href="">
                          <i class="ni ni-image text-red mb-1"></i> Paket Foto
                      </a>
                  </li>
 
                  <li class="nav-item mb-2">
-                     <a class="nav-link {{ $title == 'Data Fotografer' ? 'active' : '' }}"
-                         href="{{ route('datafotografer.index') }}">
-                         <i class="ni ni-camera-compact text-warning mb-1"></i> Fotografer
-                     </a>
-                 </li>
-
-                 <li class="nav-item mb-2">
-                     <a class="nav-link {{ $title == 'Data Pengguna' ? 'active' : '' }}"
-                         href="{{ route('datapengguna.index') }}">
-                         <i class="ni ni-single-02 text-yellow mb-1"></i> Pengguna
-                     </a>
-                 </li>
-
-                 <li class="nav-item mb-2">
-                     <a class="nav-link {{ $title == 'Data Transaksi' ? 'active' : '' }}"
-                         href="{{ route('datatransaksi.index') }}">
+                     <a class="nav-link {{ $title == 'Data Transaksi' ? 'active' : '' }}" href="">
                          <i class="ni ni-money-coins text-success mb-1"></i> Transaksi
                      </a>
                  </li>

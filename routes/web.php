@@ -2,7 +2,9 @@
 
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\FotograferController;
+use App\Http\Controllers\PaketFotoController;
 use App\Http\Controllers\PenggunaController;
+use App\Http\Controllers\TransaksiController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,6 +21,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [AuthController::class, 'home'])->name('home');
 Route::get('/login', [AuthController::class, 'login'])->name('login');
 Route::post('/login', [AuthController::class, 'loginAuth'])->name('login.auth');
+Route::get('logout', [AuthController::class, 'logout'])->name('logout');
 
 Route::get('/pilihanregis', [AuthController::class, 'pilihanRegis'])->name('pilihan.regis');
 Route::get('/regispengguna', [AuthController::class, 'regisPengguna'])->name('regis.pengguna');
@@ -29,6 +32,10 @@ Route::post('/regisfotografer', [AuthController::class, 'regisFotograferAuth'])-
 // route admin
 Route::group(['middleware' => ['auth', 'cekLevel:admin']], function () {
     Route::get('dashboard-admin', [AuthController::class, 'dashboard_admin'])->name('dashboard-admin');
+
+    // paket foto
+    Route::get('/datapaketfoto', [PaketFotoController::class, 'indexAdmin'])->name('datapaketfoto.index');
+
 
     // data fotografer
     Route::get('/datafotografer', [FotograferController::class, 'indexAdmin'])->name('datafotografer.index');
@@ -41,6 +48,9 @@ Route::group(['middleware' => ['auth', 'cekLevel:admin']], function () {
     Route::get('/datapengguna/show/{id}', [PenggunaController::class, 'lihatAdmin']);
     Route::get('verifikasi_pengguna/{id}', [PenggunaController::class, 'verifikasi_pengguna']);
     Route::delete('/datapengguna/{id}', [PenggunaController::class, 'destroy']);
+
+    // data transaksi
+    Route::get('/datatransaksi', [TransaksiController::class, 'indexAdmin'])->name('datatransaksi.index');
 });
 
 //route fotografer

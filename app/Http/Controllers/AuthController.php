@@ -121,4 +121,10 @@ class AuthController extends Controller
             'password' => 'Email atau Password anda salah',
         ]);
     }
+
+    public function logout()
+    {
+        Auth::logout();
+        return redirect('/');
+    }
 }
