@@ -1,7 +1,7 @@
 @extends('Layouts.User.app', ['title' => 'Halaman Login'])
 
 @section('content')
-    <div class="card-main">
+    <div class="">
         <p class="title">Selamat datang,</p>
         <p class="subtitle">Masuk dan pilih paket foto sesuai keinginan anda</p>
 

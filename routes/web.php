@@ -36,7 +36,6 @@ Route::group(['middleware' => ['auth', 'cekLevel:admin']], function () {
     // paket foto
     Route::get('/datapaketfoto', [PaketFotoController::class, 'indexAdmin'])->name('datapaketfoto.index');
 
-
     // data fotografer
     Route::get('/datafotografer', [FotograferController::class, 'indexAdmin'])->name('datafotografer.index');
     Route::get('/datafotografer/show/{id}', [FotograferController::class, 'lihatAdmin']);
@@ -59,6 +58,6 @@ Route::group(['middleware' => ['auth', 'cekLevel:fotografer']], function () {
 });
 
 //route user
-Route::group(['middleware' => ['auth', 'cekLevel:user']], function () {
+Route::group(['middleware' => ['auth', 'cekLevel:pengguna']], function () {
     Route::get('halaman-user', [AuthController::class, 'halaman_user'])->name('halaman-user');
 });

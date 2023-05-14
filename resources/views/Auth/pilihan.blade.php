@@ -1,7 +1,7 @@
 @extends('Layouts.User.app', ['title' => 'Pilihan Registrasi'])
 
 @section('content')
-    <div class="card-main">
+    <div class="">
         <p class="title">Halaman Registrasi</p>
 
         <img loading="lazy" class="d-block my-5 mx-auto" src="{{ asset('assets/img/img-login.png') }}" alt=""

@@ -1,7 +1,7 @@
 @extends('Layouts.User.app', ['title' => 'Halaman Registrasi Pengguna'])
 
 @section('content')
-    <div class="card-main">
+    <div class="">
         <p class="title mb-md-5 mb-4">Registrasi Pengguna</p>
 
         <form action="{{ route('pengguna.auth') }}" method="POST">

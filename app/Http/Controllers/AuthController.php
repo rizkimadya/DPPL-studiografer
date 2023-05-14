@@ -109,7 +109,7 @@ class AuthController extends Controller
                 if (auth()->user()->roles == 'fotografer' && auth()->user()->is_verification == 1) {
                     return redirect()->route('dashboard-fotografer');
                     return view('Fotografer.Dashboard.dashboard')->with('users', $request);
-                } else if (auth()->user()->roles == 'user' && auth()->user()->is_verification == 1) {
+                } else if (auth()->user()->roles == 'pengguna' && auth()->user()->is_verification == 1) {
                     return redirect()->route('halaman-user');
                     return view('User.Home.home')->with('users', $request);
                 } else {
