@@ -267,6 +267,9 @@ nav {
     border: 1px solid #8ea3f6;
     color: #8ea3f6;
 }
+.main-content footer {
+    margin-bottom: 80px;
+}
 .main-content footer p {
     font-size: 12px;
     font-style: italic;

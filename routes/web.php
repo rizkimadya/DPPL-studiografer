@@ -5,6 +5,7 @@ use App\Http\Controllers\FotograferController;
 use App\Http\Controllers\PaketFotoController;
 use App\Http\Controllers\PenggunaController;
 use App\Http\Controllers\TransaksiController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -60,4 +61,13 @@ Route::group(['middleware' => ['auth', 'cekLevel:fotografer']], function () {
 //route user
 Route::group(['middleware' => ['auth', 'cekLevel:pengguna']], function () {
     Route::get('halaman-user', [AuthController::class, 'halaman_user'])->name('halaman-user');
+
+    // paket foto
+    Route::get('paketfoto', [UserController::class, 'indexPaket'])->name('paketfoto.index');
+    Route::get('paketfoto/detail/', [UserController::class, 'detailPaket'])->name('paketfoto.detail');
+
+    // fotografer
+    Route::get('fotografer', [UserController::class, 'indexFotografer'])->name('fotografer.index');
+    Route::get('fotografer/detail/', [UserController::class, 'detailFotografer'])->name('fotografer.detail');
+
 });

@@ -1,14 +1,16 @@
 @extends('Layouts.User.app', ['title' => 'Home'])
 
 @section('content')
-    <div class="">
-        <div class="card p-3 border-0 shadow">
-            <div class="d-flex">
-                <img src="{{ asset('assets/img/iconHy.png') }}" loading="lazy" width="20px" height="20px"
-                    class="align-self-center">
-                <p class="align-self-center mb-0 ms-2" style="color: #4F5665; font-size:14px;">Hi,
-                    {{ auth()->user()->nama_lengkap }}</p>
-                <img src="{{ asset('assets/img/user.png') }}" loading="lazy" width="30px" class="ms-auto">
+    <div class="row">
+        <div class="col-12">
+            <div class="card p-3 border-0 shadow">
+                <div class="d-flex">
+                    <img src="{{ asset('assets/img/iconHy.png') }}" loading="lazy" width="20px" height="20px"
+                        class="align-self-center">
+                    <p class="align-self-center mb-0 ms-2" style="color: #4F5665; font-size:14px;">Hi,
+                        {{ auth()->user()->nama_lengkap }}</p>
+                    <img src="{{ asset('assets/img/user.png') }}" loading="lazy" width="30px" class="ms-auto">
+                </div>
             </div>
         </div>
 
@@ -18,26 +20,26 @@
                 Foto sesuai keinginan anda, dan dapatkan promo nya disini</p>
         </div>
 
-        <div class="row">
-            <div class="col-4">
-                <div class="card-user">
-                    <img src="{{ asset('assets/img/bgheroo.png') }}" alt="" width="100%" lazy="load">
-                    <p class="title-paket">Paket Pernikahan</p>
-                </div>
-            </div>
-            <div class="col-4">
-                <div class="card-user">
-                    <img src="{{ asset('assets/img/bgheroo.png') }}" alt="" width="100%" lazy="load">
-                    <p class="title-paket">Paket Wisuda</p>
-                </div>
-            </div>
-            <div class="col-4">
-                <div class="card-user">
-                    <img src="{{ asset('assets/img/bgheroo.png') }}" alt="" width="100%" lazy="load">
-                    <p class="title-paket">Paket Keluarga</p>
-                </div>
+
+        <div class="col-4">
+            <div class="card-user">
+                <img src="{{ asset('assets/img/bgheroo.png') }}" alt="" width="100%" lazy="load">
+                <p class="title-paket">Paket Pernikahan</p>
             </div>
         </div>
+        <div class="col-4">
+            <div class="card-user">
+                <img src="{{ asset('assets/img/bgheroo.png') }}" alt="" width="100%" lazy="load">
+                <p class="title-paket">Paket Wisuda</p>
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="card-user">
+                <img src="{{ asset('assets/img/bgheroo.png') }}" alt="" width="100%" lazy="load">
+                <p class="title-paket">Paket Keluarga</p>
+            </div>
+        </div>
+
 
         <div class="mt-5 mb-3">
             <p class="title">Paket Foto</p>
@@ -47,23 +49,23 @@
             </div>
         </div>
 
-        <div class="row">
-            <div class="col-6">
-                <div class="card-user text-center">
-                    <img src="{{ asset('assets/img/bgheroo.png') }}" alt="" width="100%" lazy="load">
-                    <p class="title-paket-foto">Paket Pernikahan</p>
-                    <p class="harga-paket">Rp. 100.000</p>
-                    <a href="" class="btn btn-detail">Lihat Detail</a>
-                </div>
-            </div>
-            <div class="col-6">
-                <div class="card-user text-center">
-                    <img src="{{ asset('assets/img/bgheroo.png') }}" alt="" width="100%" lazy="load">
-                    <p class="title-paket-foto">Paket Wisuda</p>
-                    <p class="harga-paket">Rp. 100.000</p>
-                    <a href="" class="btn btn-detail">Lihat Detail</a>
-                </div>
+
+        <div class="col-6 mb-md-4 mb-3">
+            <div class="card-user text-center">
+                <img src="{{ asset('assets/img/bgheroo.png') }}" alt="" width="100%" lazy="load">
+                <p class="title-paket-foto">Paket Wisuda</p>
+                <p class="harga-paket">Rp. 100.000</p>
+                <a href="{{ route('paketfoto.detail') }}" class="btn btn-detail">Lihat Detail</a>
             </div>
         </div>
+        <div class="col-6 mb-md-4 mb-3">
+            <div class="card-user text-center">
+                <img src="{{ asset('assets/img/bgheroo.png') }}" alt="" width="100%" lazy="load">
+                <p class="title-paket-foto">Paket Wisuda</p>
+                <p class="harga-paket">Rp. 100.000</p>
+                <a href="" class="btn btn-detail">Lihat Detail</a>
+            </div>
+        </div>
+
     </div>
 @endsection
