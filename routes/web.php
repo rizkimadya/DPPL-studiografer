@@ -70,4 +70,9 @@ Route::group(['middleware' => ['auth', 'cekLevel:pengguna']], function () {
     Route::get('fotografer', [UserController::class, 'indexFotografer'])->name('fotografer.index');
     Route::get('fotografer/detail/', [UserController::class, 'detailFotografer'])->name('fotografer.detail');
 
+    // profile
+    Route::get('transaksi', [UserController::class, 'indexTransaksi'])->name('transaksi.index');
+
+    // profile
+    Route::get('saya', [UserController::class, 'indexProfile'])->name('saya.index');
 });

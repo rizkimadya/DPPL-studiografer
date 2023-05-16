@@ -9,7 +9,9 @@
                         class="align-self-center">
                     <p class="align-self-center mb-0 ms-2" style="color: #4F5665; font-size:14px;">Hi,
                         {{ auth()->user()->nama_lengkap }}</p>
-                    <img src="{{ asset('assets/img/user.png') }}" loading="lazy" width="30px" class="ms-auto">
+                    <a href="{{ route('saya.index') }}" class="ms-auto">
+                        <img src="{{ asset('assets/img/user.png') }}" loading="lazy" width="30px">
+                    </a>
                 </div>
             </div>
         </div>

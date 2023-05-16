@@ -20,11 +20,13 @@
                             <i class='bx bx-camera'></i>
                             <p class="mb-0" href="#">Fotografer</p>
                         </a>
-                        <a href="" class="text-center nav-item">
+                        <a href="{{ route('transaksi.index') }}"
+                            class="text-center nav-item {{ $title == 'Transaksi' ? 'active' : '' }}">
                             <i class='bx bx-wallet'></i>
                             <p class="mb-0" href="#">Transaksi</p>
                         </a>
-                        <a href="" class="text-center nav-item">
+                        <a href="{{ route('saya.index') }}"
+                            class="text-center nav-item {{ $title == 'Saya' ? 'active' : '' }}">
                             <i class='bx bx-user'></i>
                             <p class="mb-0" href="#">Saya</p>
                         </a>
@@ -54,11 +56,13 @@
                             <i class='bx bx-camera'></i>
                             <p class="mb-0" href="#">Fotografer</p>
                         </a>
-                        <a href="" class="text-center nav-item">
+                        <a href="{{ route('transaksi.index') }}"
+                            class="text-center nav-item {{ $title == 'Transaksi' ? 'active' : '' }}">
                             <i class='bx bx-wallet'></i>
                             <p class="mb-0" href="#">Transaksi</p>
                         </a>
-                        <a href="" class="text-center nav-item">
+                        <a href="{{ route('saya.index') }}"
+                            class="text-center nav-item {{ $title == 'Saya' ? 'active' : '' }}">
                             <i class='bx bx-user'></i>
                             <p class="mb-0" href="#">Saya</p>
                         </a>

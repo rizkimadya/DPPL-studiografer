@@ -26,4 +26,13 @@ class UserController extends Controller
         return view('User.Fotografer.detail');
     }
 
+    public function indexTransaksi()
+    {
+        return view('User.Transaksi.index');
+    }
+
+    public function indexProfile()
+    {
+        return view('User.Saya.index');
+    }
 }
