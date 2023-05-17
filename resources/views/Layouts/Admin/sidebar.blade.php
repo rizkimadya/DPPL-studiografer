@@ -90,6 +90,13 @@
                      </a>
                  </li>
 
+                 <li class="nav-item mb-2">
+                     <a class="nav-link {{ $title == 'Data Testimoni' ? 'active' : '' }}"
+                         href="{{ route('datatestimoni.index') }}">
+                         <i class="ni ni-chat-round text-info mb-1"></i> Testimoni
+                     </a>
+                 </li>
+
              </ul>
          </div>
      </div>

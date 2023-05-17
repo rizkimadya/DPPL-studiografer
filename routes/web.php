@@ -4,6 +4,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\FotograferController;
 use App\Http\Controllers\PaketFotoController;
 use App\Http\Controllers\PenggunaController;
+use App\Http\Controllers\TestimoniController;
 use App\Http\Controllers\TransaksiController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
@@ -51,6 +52,11 @@ Route::group(['middleware' => ['auth', 'cekLevel:admin']], function () {
 
     // data transaksi
     Route::get('/datatransaksi', [TransaksiController::class, 'indexAdmin'])->name('datatransaksi.index');
+
+    // data testimoni
+    Route::get('/datatestimoni', [TestimoniController::class, 'index'])->name('datatestimoni.index');
+    Route::delete('/datatestimoni/{id}', [TestimoniController::class, 'destroy']);
+    Route::get('/datatestimoni/show/{id}', [TestimoniController::class, 'show']);
 });
 
 //route fotografer
@@ -75,4 +81,5 @@ Route::group(['middleware' => ['auth', 'cekLevel:pengguna']], function () {
 
     // profile
     Route::get('saya', [UserController::class, 'indexProfile'])->name('saya.index');
+    Route::post('saya', [TestimoniController::class, 'store'])->name('testimoni.store');
 });

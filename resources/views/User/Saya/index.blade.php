@@ -32,33 +32,29 @@
 
         <div class="col-12 mt-4">
             <p class="title mb-2 text-center">Testimoni</p>
-            <form action="" method="POST">
+            <form action="{{ route('testimoni.store') }}" method="POST">
                 @csrf
-                <input type="text" hidden value="{{ auth()->user()->nama_lengkap }}">
                 <div class="mb-3">
-                    <label for="studio_tujuan" class="form-label subtitle">Studio Tujuan</label>
-                    <input type="text" name="studio_tujuan" id="studio_tujuan" class="form-control border subtitle"
-                        style="padding: .375rem .75rem; border-radius: .375rem;" placeholder="Masukkan Studio Tujuan">
+                    <label for="fotografer_tujuan" class="form-label subtitle">Fotografer Tujuan</label>
+                    <input type="text" name="fotografer_tujuan" id="fotografer_tujuan"
+                        class="form-control border subtitle" style="padding: .375rem .75rem; border-radius: .375rem;"
+                        placeholder="Masukkan Fotografer/Studio Tujuan" required>
                 </div>
                 <div class="mb-3">
-                    <label for="range" class="form-label subtitle">Studio Tujuan</label>
-                    <select name="range" id="range" class="form-control subtitle">
+                    <label for="range" class="form-label subtitle">Penilaian</label>
+                    <select name="range" id="range" class="form-control subtitle" required>
                         <option selected disabled hidden>Range Nilai</option>
                         <option value="1,0">1,0</option>
-                        <option value="1,5">1,5</option>
                         <option value="2,0">2,0</option>
-                        <option value="2,5">2,5</option>
                         <option value="3,0">3,0</option>
-                        <option value="3,5">3,5</option>
                         <option value="4,0">4,0</option>
-                        <option value="4,5">4,5</option>
                         <option value="5,0">5,0</option>
                     </select>
                 </div>
                 <div class="mb-3">
-                    <label for="isi-testimoni" class="form-label">Isi Testimoni</label>
-                    <textarea name="isi-testimoni" id="isi-testimoni" rows="3" class="form-control subtitle"
-                        placeholder="Masukkan Isi Testimoni"></textarea>
+                    <label for="isi_testimoni" class="form-label">Isi Testimoni</label>
+                    <textarea name="isi_testimoni" id="isi_testimoni" rows="3" class="form-control subtitle"
+                        placeholder="Masukkan Isi Testimoni" required></textarea>
                 </div>
                 <div>
                     <button type="submit" class="btn btn-login w-100 mt-3">Submit</button>

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Testimoni;
 use App\Models\User;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
@@ -12,7 +13,8 @@ class AuthController extends Controller
 {
     public function home()
     {
-        return view('home');
+        $testimoni = Testimoni::all();
+        return view('home', compact('testimoni'));
     }
 
     public function dashboard_admin()

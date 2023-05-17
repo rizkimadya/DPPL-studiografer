@@ -201,70 +201,24 @@
                 </div>
             </div>
             <div class="carousel" data-flickity='{ "groupCells": true }'>
-                <div class="carousel-cell">
-                    <div class="card">
-                        <div class="d-flex">
-                            <img src="{{ asset('assets/img/bgheroo.png') }}" alt="">
-                            <div class="ms-3 align-self-center mb-4">
-                                <p class="mb-0 nama">Nama User</p>
-                                <p class="studio mb-0">Studio Tujuan</p>
+                @foreach ($testimoni as $item)
+                    <div class="carousel-cell">
+                        <div class="card">
+                            <div class="d-flex">
+                                <img src="{{ asset('assets/img/bgheroo.png') }}" alt="">
+                                <div class="ms-3 align-self-center mb-4">
+                                    <p class="mb-0 nama">{{ $item->nama_user }}</p>
+                                    <p class="studio mb-0">{{ $item->fotografer_tujuan }}</p>
+                                </div>
+                                <div class="ms-auto align-self-center d-flex">
+                                    <p class="me-2">{{ $item->range }}</p>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                </div>
                             </div>
-                            <div class="ms-auto align-self-center d-flex">
-                                <p class="me-2">4,5</p>
-                                <i class="bi bi-star-fill text-warning"></i>
-                            </div>
+                            <p>"{{ $item->isi_testimoni }}"</p>
                         </div>
-                        <p>"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius, neque."</p>
                     </div>
-                </div>
-                <div class="carousel-cell">
-                    <div class="card">
-                        <div class="d-flex">
-                            <img src="{{ asset('assets/img/bgheroo.png') }}" alt="">
-                            <div class="ms-3 align-self-center mb-4">
-                                <p class="mb-0 nama">Nama User</p>
-                                <p class="studio mb-0">Studio Tujuan</p>
-                            </div>
-                            <div class="ms-auto align-self-center d-flex">
-                                <p class="me-2">4,5</p>
-                                <i class="bi bi-star-fill text-warning"></i>
-                            </div>
-                        </div>
-                        <p>"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius, neque."</p>
-                    </div>
-                </div>
-                <div class="carousel-cell">
-                    <div class="card">
-                        <div class="d-flex">
-                            <img src="{{ asset('assets/img/bgheroo.png') }}" alt="">
-                            <div class="ms-3 align-self-center mb-4">
-                                <p class="mb-0 nama">Nama User</p>
-                                <p class="studio mb-0">Studio Tujuan</p>
-                            </div>
-                            <div class="ms-auto align-self-center d-flex">
-                                <p class="me-2">4,5</p>
-                                <i class="bi bi-star-fill text-warning"></i>
-                            </div>
-                        </div>
-                        <p>"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius, neque."</p>
-                    </div>
-                </div>
-                <div class="carousel-cell">
-                    <div class="card">
-                        <div class="d-flex">
-                            <img src="{{ asset('assets/img/bgheroo.png') }}" alt="">
-                            <div class="ms-3 align-self-center mb-4">
-                                <p class="mb-0 nama">Nama User</p>
-                                <p class="studio mb-0">Studio Tujuan</p>
-                            </div>
-                            <div class="ms-auto align-self-center d-flex">
-                                <p class="me-2">4,5</p>
-                                <i class="bi bi-star-fill text-warning"></i>
-                            </div>
-                        </div>
-                        <p>"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius, neque."</p>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </section>
