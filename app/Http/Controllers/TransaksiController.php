@@ -16,7 +16,7 @@ class TransaksiController extends Controller
 
     public function index()
     {
-        //
+        return view('Fotografer.Transaksi.index');
     }
 
     /**

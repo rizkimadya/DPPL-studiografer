@@ -38,7 +38,7 @@
                                         <div class="modal-content">
 
                                             <div class="modal-body">
-                                                <iframe src="/storage/{{ $user->surat_izin }}" width="100%"></iframe>
+                                                <img src="/storage/{{ $user->surat_izin }}" width="100%" />
                                             </div>
                                             <div class="modal-footer">
                                                 <button type="button" class="btn btn-warning"

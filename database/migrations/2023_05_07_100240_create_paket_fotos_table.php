@@ -15,6 +15,12 @@ return new class extends Migration
     {
         Schema::create('paket_fotos', function (Blueprint $table) {
             $table->id();
+            $table->string('user_id')->nullable();
+            $table->string('gambar');
+            $table->string('nama_fotografer')->nullable();
+            $table->string('nama_paket');
+            $table->string('harga_paket');
+            $table->text('ket_paket');
             $table->timestamps();
         });
     }

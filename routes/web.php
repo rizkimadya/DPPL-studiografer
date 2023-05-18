@@ -37,6 +37,7 @@ Route::group(['middleware' => ['auth', 'cekLevel:admin']], function () {
 
     // paket foto
     Route::get('/datapaketfoto', [PaketFotoController::class, 'indexAdmin'])->name('datapaketfoto.index');
+    Route::get('datapaketfoto/show/{id}', [PaketFotoController::class, 'showAdmin'])->name('datapaketfoto.show');
 
     // data fotografer
     Route::get('/datafotografer', [FotograferController::class, 'indexAdmin'])->name('datafotografer.index');
@@ -62,6 +63,18 @@ Route::group(['middleware' => ['auth', 'cekLevel:admin']], function () {
 //route fotografer
 Route::group(['middleware' => ['auth', 'cekLevel:fotografer']], function () {
     Route::get('dashboard-fotografer', [AuthController::class, 'dashboard_fotografer'])->name('dashboard-fotografer');
+
+    // paket foto
+    Route::get('paketfotografer', [PaketFotoController::class, 'index'])->name('paketfotografer.index');
+    Route::get('paketfotografer/create', [PaketFotoController::class, 'create'])->name('paketfotografer.create');
+    Route::post('paketfotografer', [PaketFotoController::class, 'store'])->name('paketfotografer.store');
+    Route::get('paketfotografer/edit/{id}', [PaketFotoController::class, 'edit'])->name('paketfotografer.edit');
+    Route::post('paketfotografer/update/{id}', [PaketFotoController::class, 'update'])->name('paketfotografer.update');
+    Route::get('paketfotografer/show/{id}', [PaketFotoController::class, 'show'])->name('paketfotografer.show');
+    Route::delete('/paketfotografer/{id}', [PaketFotoController::class, 'destroy']);
+
+    // transaksi
+    Route::get('transaksifotografer', [TransaksiController::class, 'index'])->name('transaksifotografer.index');
 });
 
 //route user

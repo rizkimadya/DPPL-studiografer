@@ -56,19 +56,21 @@
              <!-- Navigation -->
              <ul class="navbar-nav">
                  <li class="nav-item mb-2">
-                     <a class="nav-link {{ $title == 'Dashboard Fotografer' ? 'active' : '' }}" href="">
+                     <a class="nav-link {{ $title == 'Dashboard Fotografer' ? 'active' : '' }}" href="{{ route('dashboard-fotografer') }}">
                          <i class="ni ni-ruler-pencil text-primary mb-1"></i> Dashboard
                      </a>
                  </li>
 
                  <li class="nav-item mb-2">
-                     <a class="nav-link {{ $title == 'Data Paket Foto' ? 'active' : '' }}" href="">
+                     <a class="nav-link {{ $title == 'Paket Foto' ? 'active' : '' }}"
+                         href="{{ route('paketfotografer.index') }}">
                          <i class="ni ni-image text-red mb-1"></i> Paket Foto
                      </a>
                  </li>
 
                  <li class="nav-item mb-2">
-                     <a class="nav-link {{ $title == 'Data Transaksi' ? 'active' : '' }}" href="">
+                     <a class="nav-link {{ $title == 'Transaksi' ? 'active' : '' }}"
+                         href="{{ route('transaksifotografer.index') }}">
                          <i class="ni ni-money-coins text-success mb-1"></i> Transaksi
                      </a>
                  </li>

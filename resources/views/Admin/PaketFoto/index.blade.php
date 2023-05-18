@@ -8,14 +8,27 @@
                     <thead>
                         <tr>
                             <th>No</th>
-                            <th>Nama Agency</th>
+                            <th>Nama Fotografer</th>
                             <th>Nama Paket Foto</th>
                             <th>Harga</th>
                             <th class="text-center">Aksi</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr></tr>
+                        @foreach ($paketfoto as $item)
+                            <tr>
+                                <td>{{ $loop->iteration }}</td>
+                                <td>{{ $item->nama_fotografer }}</td>
+                                <td>{{ $item->nama_paket }}</td>
+                                <td>{{ $item->harga_paket }}</td>
+                                <td>
+                                    <div class="d-flex justify-content-center">
+                                        <a href="/datapaketfoto/show/{{ $item->id }}"
+                                            class="btn btn-sm btn-info">Lihat</a>
+                                    </div>
+                                </td>
+                            </tr>
+                        @endforeach
                     </tbody>
                 </table>
             </div>
