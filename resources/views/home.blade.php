@@ -129,30 +129,17 @@
             </div>
 
             <div class="row mt-5">
-                <div class="col-md-4 col-sm-6 mb-3">
-                    <div class="card p-3">
-                        <img src="{{ asset('assets/img/bgheroo.png') }}" alt="">
-                        <p class="jenis-paket">Paket Pernikahan</p>
-                        <p class="harga-paket">Rp. 100.000</p>
-                        <a href="#" class="btn btn-detail">Lihat Detail</a>
+                @foreach ($paketfoto as $item)
+                    <div class="col-md-4 col-sm-6 mb-3">
+                        <div class="card p-3">
+                            <img src="/gambarPaketFoto/{{ $item->gambar }}" alt="">
+                            <p class="jenis-paket">{{ $item->nama_paket }}</p>
+                            <p class="harga-paket">Rp
+                                {{ number_format($item->harga_paket, 0, ',', '.') }}</p>
+                            <a href="{{ route('paketfoto.detail') }}" class="btn btn-detail">Lihat Detail</a>
+                        </div>
                     </div>
-                </div>
-                <div class="col-md-4 col-sm-6 mb-3">
-                    <div class="card p-3">
-                        <img src="{{ asset('assets/img/bgheroo.png') }}" alt="">
-                        <p class="jenis-paket">Paket Pernikahan</p>
-                        <p class="harga-paket">Rp. 100.000</p>
-                        <a href="#" class="btn btn-detail">Lihat Detail</a>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6 mb-3">
-                    <div class="card p-3">
-                        <img src="{{ asset('assets/img/bgheroo.png') }}" alt="">
-                        <p class="jenis-paket">Paket Pernikahan</p>
-                        <p class="harga-paket">Rp. 100.000</p>
-                        <a href="#" class="btn btn-detail">Lihat Detail</a>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </section>
@@ -168,24 +155,11 @@
                 </div>
             </div>
             <div class="carousel" data-flickity='{ "groupCells": true }'>
-                <div class="carousel-cell">
-                    <img src="{{ asset('assets/img/bgheroo.png') }}" alt="">
-                </div>
-                <div class="carousel-cell">
-                    <img src="{{ asset('assets/img/bgheroo.png') }}" alt="">
-                </div>
-                <div class="carousel-cell">
-                    <img src="{{ asset('assets/img/bgheroo.png') }}" alt="">
-                </div>
-                <div class="carousel-cell">
-                    <img src="{{ asset('assets/img/bgheroo.png') }}" alt="">
-                </div>
-                <div class="carousel-cell">
-                    <img src="{{ asset('assets/img/bgheroo.png') }}" alt="">
-                </div>
-                <div class="carousel-cell">
-                    <img src="{{ asset('assets/img/bgheroo.png') }}" alt="">
-                </div>
+                @foreach ($momenFoto as $item)
+                    <div class="carousel-cell">
+                        <img src="/datagaleriFoto/{{ $item->gambar }}" alt="">
+                    </div>
+                @endforeach
             </div>
         </div>
     </section>

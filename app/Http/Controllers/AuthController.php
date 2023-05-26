@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\GaleriFoto;
+use App\Models\PaketFoto;
 use App\Models\Testimoni;
 use App\Models\User;
 use Illuminate\Support\Str;
@@ -14,7 +16,9 @@ class AuthController extends Controller
     public function home()
     {
         $testimoni = Testimoni::all();
-        return view('home', compact('testimoni'));
+        $paketfoto = PaketFoto::latest()->take(3)->get();
+        $momenFoto = GaleriFoto::all();
+        return view('home', compact('testimoni', 'paketfoto', 'momenFoto'));
     }
 
     public function dashboard_admin()
@@ -127,6 +131,6 @@ class AuthController extends Controller
     public function logout()
     {
         Auth::logout();
-        return redirect('/');
+        return redirect('/login');
     }
 }

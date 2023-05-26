@@ -56,7 +56,8 @@
              <!-- Navigation -->
              <ul class="navbar-nav">
                  <li class="nav-item mb-2">
-                     <a class="nav-link {{ $title == 'Dashboard Fotografer' ? 'active' : '' }}" href="{{ route('dashboard-fotografer') }}">
+                     <a class="nav-link {{ $title == 'Dashboard Fotografer' ? 'active' : '' }}"
+                         href="{{ route('dashboard-fotografer') }}">
                          <i class="ni ni-ruler-pencil text-primary mb-1"></i> Dashboard
                      </a>
                  </li>
@@ -72,6 +73,13 @@
                      <a class="nav-link {{ $title == 'Transaksi' ? 'active' : '' }}"
                          href="{{ route('transaksifotografer.index') }}">
                          <i class="ni ni-money-coins text-success mb-1"></i> Transaksi
+                     </a>
+                 </li>
+
+                 <li class="nav-item mb-2">
+                     <a class="nav-link {{ $title == 'Galeri Foto' ? 'active' : '' }}"
+                         href="{{ route('galeri.index') }}">
+                         <i class="ni ni-camera-compact text-danger mb-1"></i> Galeri Foto
                      </a>
                  </li>
 

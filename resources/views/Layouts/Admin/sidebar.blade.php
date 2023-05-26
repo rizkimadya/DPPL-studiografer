@@ -97,6 +97,13 @@
                      </a>
                  </li>
 
+                 <li class="nav-item mb-2">
+                     <a class="nav-link {{ $title == 'Data Galeri' ? 'active' : '' }}"
+                         href="{{ route('datagaleri.index') }}">
+                         <i class="ni ni-camera-compact text-danger mb-1"></i> Galeri Foto
+                     </a>
+                 </li>
+
              </ul>
          </div>
      </div>

@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\FotograferController;
+use App\Http\Controllers\GaleriFotoController;
 use App\Http\Controllers\PaketFotoController;
 use App\Http\Controllers\PenggunaController;
 use App\Http\Controllers\TestimoniController;
@@ -58,6 +59,9 @@ Route::group(['middleware' => ['auth', 'cekLevel:admin']], function () {
     Route::get('/datatestimoni', [TestimoniController::class, 'index'])->name('datatestimoni.index');
     Route::delete('/datatestimoni/{id}', [TestimoniController::class, 'destroy']);
     Route::get('/datatestimoni/show/{id}', [TestimoniController::class, 'show']);
+
+    // data galeri foto
+    Route::get('/datagaleri', [GaleriFotoController::class, 'indexAdmin'])->name('datagaleri.index');
 });
 
 //route fotografer
@@ -75,6 +79,13 @@ Route::group(['middleware' => ['auth', 'cekLevel:fotografer']], function () {
 
     // transaksi
     Route::get('transaksifotografer', [TransaksiController::class, 'index'])->name('transaksifotografer.index');
+
+    // galeri foto
+    Route::get('/galerifoto', [GaleriFotoController::class, 'index'])->name('galeri.index');
+    Route::post('/galerifoto', [GaleriFotoController::class, 'store'])->name('galeri.store');
+    Route::get('/galerifoto/edit/{id}', [GaleriFotoController::class, 'edit'])->name('galeri.edit');
+    Route::post('/galerifoto/update/{id}', [GaleriFotoController::class, 'update'])->name('galeri.update');
+    Route::delete('/galerifoto/{id}', [GaleriFotoController::class, 'destroy']);
 });
 
 //route user
