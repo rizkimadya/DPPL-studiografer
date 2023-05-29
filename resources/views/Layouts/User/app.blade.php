@@ -22,6 +22,7 @@
                 <div class="row">
                     <div class="col-md-6 mx-auto">
                         <div class="card-main">
+                            @include('sweetalert::alert')
                             @yield('content')
 
                             @if (

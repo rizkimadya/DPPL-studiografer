@@ -34,7 +34,7 @@
             <div class="header pb-8 pt-5 pt-md-8" style="background-color: #8EA3F6;">
                 <div class="container-fluid">
                     <div class="header-body">
-                        {{-- @include('sweetalert::alert') --}}
+                        @include('sweetalert::alert')
                         @yield('content')
                     </div>
                 </div>

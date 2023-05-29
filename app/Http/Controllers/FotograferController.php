@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class FotograferController extends Controller
 {
@@ -32,6 +33,7 @@ class FotograferController extends Controller
         $user->update([
             "is_verification" => 1
         ]);
+        Alert::success('Sukses', 'Verifikasi Berhasil');
         return redirect()->route('datafotografer.index');
     }
 }

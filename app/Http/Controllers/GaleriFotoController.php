@@ -6,6 +6,7 @@ use App\Models\GaleriFoto;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class GaleriFotoController extends Controller
 {
@@ -60,6 +61,7 @@ class GaleriFotoController extends Controller
         }
 
         $galeriFoto->save();
+        Alert::success('Sukses', 'Data berhasil ditambahkan');
         return redirect()->route('galeri.index');
     }
 
@@ -114,6 +116,7 @@ class GaleriFotoController extends Controller
         }
 
         $galeriFoto->update($data);
+        Alert::success('Sukses', 'Data berhasil diupdate');
         return redirect('galerifoto');
     }
 
@@ -133,6 +136,7 @@ class GaleriFotoController extends Controller
         }
 
         $galeriFoto->delete();
+        Alert::success('Sukses', 'Data berhasil dihapus');
         return redirect('galerifoto');
     }
 }

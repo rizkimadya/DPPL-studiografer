@@ -18,21 +18,15 @@
             <p class="subtitle">Booking segera fotografer anda</p>
         </div>
 
-        <div class="col-6 mb-md-4 mb-3">
-            <div class="card-user text-center">
-                <img src="{{ asset('assets/img/bgheroo.png') }}" alt="" width="100%" lazy="load">
-                <p class="title-paket-foto">Nama Fotografer</p>
-                <p class="harga-paket">Alamat</p>
-                <a href="{{ route('fotografer.detail') }}" class="btn btn-detail">Detail Fotografer</a>
+        @foreach ($fotografer as $item)
+            <div class="col-6 mb-md-4 mb-3">
+                <div class="card-user text-center">
+                    <img src="/storage/{{ $item->logo }}" alt="" width="100%" />
+                    <p class="title-paket-foto">{{ $item->nama_lengkap }}</p>
+                    <p class="harga-paket">{{ $item->alamat }}</p>
+                    <a href="{{ route('fotografer.detail') }}" class="btn btn-detail">Detail Fotografer</a>
+                </div>
             </div>
-        </div>
-        <div class="col-6 mb-md-4 mb-3">
-            <div class="card-user text-center">
-                <img src="{{ asset('assets/img/bgheroo.png') }}" alt="" width="100%" lazy="load">
-                <p class="title-paket-foto">Nama Fotografer</p>
-                <p class="harga-paket">Alamat</p>
-                <a href="" class="btn btn-detail">Detail Fotografer</a>
-            </div>
-        </div>
+        @endforeach
     </div>
 @endsection

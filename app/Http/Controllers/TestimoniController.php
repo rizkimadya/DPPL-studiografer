@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Testimoni;
 use Illuminate\Http\Request;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class TestimoniController extends Controller
 {
@@ -24,6 +25,7 @@ class TestimoniController extends Controller
         $testimoni->isi_testimoni = $request->isi_testimoni;
 
         $testimoni->save();
+        Alert::success('Sukses', 'Data berhasil ditambahkan');
         return redirect('saya');
     }
 
@@ -37,6 +39,7 @@ class TestimoniController extends Controller
     {
         $testimoni = Testimoni::find($id);
         $testimoni->delete();
+        Alert::success('Sukses', 'Data berhasil dihapus');
         return redirect()->route('datatestimoni.index');
     }
 }

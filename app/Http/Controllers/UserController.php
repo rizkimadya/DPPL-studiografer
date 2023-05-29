@@ -2,13 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\PaketFoto;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
     public function indexPaket()
     {
-        return view('User.PaketFoto.index');
+        $paketfoto = PaketFoto::all();
+        return view('User.PaketFoto.index', compact('paketfoto'));
     }
 
     public function detailPaket()
@@ -18,7 +21,8 @@ class UserController extends Controller
 
     public function indexFotografer()
     {
-        return view('User.Fotografer.index');
+        $fotografer = User::where('roles', '=', 'fotografer')->get();
+        return view('User.Fotografer.index', compact('fotografer'));
     }
 
     public function detailFotografer()

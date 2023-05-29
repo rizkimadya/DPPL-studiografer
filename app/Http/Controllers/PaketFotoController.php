@@ -3,8 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\PaketFoto;
-use Illuminate\Support\Facades\File;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class PaketFotoController extends Controller
 {
@@ -67,7 +68,7 @@ class PaketFotoController extends Controller
             $paketFoto->save();
         }
 
-
+        Alert::success('Sukses', 'Data berhasil ditambahkan');
         return redirect('paketfotografer');
     }
 
@@ -130,6 +131,7 @@ class PaketFotoController extends Controller
         }
 
         $paketFoto->update($data);
+        Alert::success('Sukses', 'Data berhasil diupdate');
         return redirect('paketfotografer');
     }
 
@@ -149,6 +151,7 @@ class PaketFotoController extends Controller
         }
 
         $paketFoto->delete();
+        Alert::success('Sukses', 'Data berhasil dihapus');
         return redirect('paketfotografer');
     }
 }

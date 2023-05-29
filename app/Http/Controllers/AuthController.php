@@ -2,14 +2,15 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\GaleriFoto;
+use App\Models\User;
 use App\Models\PaketFoto;
 use App\Models\Testimoni;
-use App\Models\User;
+use App\Models\GaleriFoto;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class AuthController extends Controller
 {
@@ -33,7 +34,8 @@ class AuthController extends Controller
 
     public function halaman_user()
     {
-        return view('User.Home.home');
+        $paketfoto = PaketFoto::latest()->take(4)->get();
+        return view('User.Home.home', compact('paketfoto'));
     }
 
     public function login()
@@ -63,6 +65,7 @@ class AuthController extends Controller
         $user = $data;
 
         $user->save();
+        Alert::success('Sukses', 'Silahkan tunggu konfirmasi di email');
         return redirect('/login');
     }
 
@@ -98,6 +101,7 @@ class AuthController extends Controller
         $user->surat_izin = Str::of($path)->replace('public', 'storage')->toString();
 
         $user->save();
+        Alert::success('Sukses', 'Silahkan tunggu konfirmasi di email');
         return redirect('/login');
     }
 

@@ -51,23 +51,16 @@
             </div>
         </div>
 
-
-        <div class="col-6 mb-md-4 mb-3">
-            <div class="card-user text-center">
-                <img src="{{ asset('assets/img/bgheroo.png') }}" alt="" width="100%" lazy="load">
-                <p class="title-paket-foto">Paket Wisuda</p>
-                <p class="harga-paket">Rp. 100.000</p>
-                <a href="{{ route('paketfoto.detail') }}" class="btn btn-detail">Lihat Detail</a>
+        @foreach ($paketfoto as $item)
+            <div class="col-6 mb-md-4 mb-3">
+                <div class="card-user text-center">
+                    <img src="/gambarPaketFoto/{{ $item->gambar }}" alt="" width="100%" lazy="load">
+                    <p class="title-paket-foto">{{ $item->nama_paket }}</p>
+                    <p class="harga-paket">Rp {{ number_format($item->harga_paket, 0, ',', '.') }}</p>
+                    <a href="{{ route('paketfoto.detail') }}" class="btn btn-detail">Lihat Detail</a>
+                </div>
             </div>
-        </div>
-        <div class="col-6 mb-md-4 mb-3">
-            <div class="card-user text-center">
-                <img src="{{ asset('assets/img/bgheroo.png') }}" alt="" width="100%" lazy="load">
-                <p class="title-paket-foto">Paket Wisuda</p>
-                <p class="harga-paket">Rp. 100.000</p>
-                <a href="" class="btn btn-detail">Lihat Detail</a>
-            </div>
-        </div>
+        @endforeach
 
     </div>
 @endsection
