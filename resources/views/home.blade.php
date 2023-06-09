@@ -136,7 +136,7 @@
                             <p class="jenis-paket">{{ $item->nama_paket }}</p>
                             <p class="harga-paket">Rp
                                 {{ number_format($item->harga_paket, 0, ',', '.') }}</p>
-                            <a href="{{ route('paketfoto.detail') }}" class="btn btn-detail">Lihat Detail</a>
+                            <a href="/paketfoto/detail/{{ $item->id }}" class="btn btn-detail">Lihat Detail</a>
                         </div>
                     </div>
                 @endforeach

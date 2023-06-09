@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('user_id')->nullable();
             $table->string('gambar');
             $table->string('nama_fotografer')->nullable();
+            $table->string('no_fotografer')->nullable();
             $table->string('nama_paket');
             $table->string('harga_paket');
             $table->text('ket_paket');

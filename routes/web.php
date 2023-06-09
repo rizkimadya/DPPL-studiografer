@@ -79,6 +79,7 @@ Route::group(['middleware' => ['auth', 'cekLevel:fotografer']], function () {
 
     // transaksi
     Route::get('transaksifotografer', [TransaksiController::class, 'index'])->name('transaksifotografer.index');
+    Route::put('transaksifotografer/{id}', [TransaksiController::class, 'update']);
 
     // galeri foto
     Route::get('/galerifoto', [GaleriFotoController::class, 'index'])->name('galeri.index');
@@ -94,7 +95,7 @@ Route::group(['middleware' => ['auth', 'cekLevel:pengguna']], function () {
 
     // paket foto
     Route::get('paketfoto', [UserController::class, 'indexPaket'])->name('paketfoto.index');
-    Route::get('paketfoto/detail/', [UserController::class, 'detailPaket'])->name('paketfoto.detail');
+    Route::get('paketfoto/detail/{id}', [UserController::class, 'detailPaket'])->name('paketfoto.detail');
 
     // fotografer
     Route::get('fotografer', [UserController::class, 'indexFotografer'])->name('fotografer.index');
@@ -102,6 +103,7 @@ Route::group(['middleware' => ['auth', 'cekLevel:pengguna']], function () {
 
     // profile
     Route::get('transaksi', [UserController::class, 'indexTransaksi'])->name('transaksi.index');
+    Route::post('transaksi', [TransaksiController::class, 'store'])->name('transaksi.store');
 
     // profile
     Route::get('saya', [UserController::class, 'indexProfile'])->name('saya.index');

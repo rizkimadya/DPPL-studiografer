@@ -54,10 +54,11 @@
         @foreach ($paketfoto as $item)
             <div class="col-6 mb-md-4 mb-3">
                 <div class="card-user text-center">
-                    <img src="/gambarPaketFoto/{{ $item->gambar }}" alt="" width="100%" lazy="load">
+                    <img src="/gambarPaketFoto/{{ $item->gambar }}" alt="" width="100%"
+                        style="height: 120px; object-fit: cover;" lazy="load">
                     <p class="title-paket-foto">{{ $item->nama_paket }}</p>
                     <p class="harga-paket">Rp {{ number_format($item->harga_paket, 0, ',', '.') }}</p>
-                    <a href="{{ route('paketfoto.detail') }}" class="btn btn-detail">Lihat Detail</a>
+                    <a href="/paketfoto/detail/{{ $item->id }}" class="btn btn-detail">Lihat Detail</a>
                 </div>
             </div>
         @endforeach

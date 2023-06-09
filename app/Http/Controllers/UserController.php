@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\PaketFoto;
+use App\Models\Transaksi;
 use App\Models\User;
 use Illuminate\Http\Request;
 
@@ -10,13 +11,14 @@ class UserController extends Controller
 {
     public function indexPaket()
     {
-        $paketfoto = PaketFoto::all();
+        $paketfoto = PaketFoto::latest()->get();
         return view('User.PaketFoto.index', compact('paketfoto'));
     }
 
-    public function detailPaket()
+    public function detailPaket($id)
     {
-        return view('User.PaketFoto.detail');
+        $paketFoto = PaketFoto::where('id', $id)->firstOrFail();
+        return view('User.PaketFoto.detail', compact('paketFoto'));
     }
 
     public function indexFotografer()
@@ -32,7 +34,8 @@ class UserController extends Controller
 
     public function indexTransaksi()
     {
-        return view('User.Transaksi.index');
+        $transaksi = Transaksi::where('email_user', auth()->user()->email)->latest()->get();
+        return view('User.Transaksi.index', compact('transaksi'));
     }
 
     public function indexProfile()

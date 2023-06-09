@@ -65,7 +65,7 @@ class AuthController extends Controller
         $user = $data;
 
         $user->save();
-        Alert::success('Sukses', 'Silahkan tunggu konfirmasi di email');
+        Alert::success('Sukses', 'Silahkan Login');
         return redirect('/login');
     }
 
@@ -89,19 +89,24 @@ class AuthController extends Controller
         $user = $data;
 
         $dir = 'File Fotografer/' . $request->nama_lengkap;
-        $path = $request
-            ->file('logo')
-            ->storePubliclyAs($dir, "logo.{$request->file('logo')->extension()}");
-        $user->logo = Str::of($path)->replace('public', 'storage')->toString();
 
-        $dir = 'File Fotografer/' . $request->nama_lengkap;
-        $path = $request
-            ->file('surat_izin')
-            ->storePubliclyAs($dir, "surat_izin.{$request->file('surat_izin')->extension()}");
-        $user->surat_izin = Str::of($path)->replace('public', 'storage')->toString();
+        if ($request->hasFile('logo')) {
+            $path = $request
+                ->file('logo')
+                ->storePubliclyAs($dir, "logo.{$request->file('logo')->extension()}");
+            $user->logo = Str::of($path)->replace('public', 'storage')->toString();
+        }
+
+        if ($request->hasFile('surat_izin')) {
+            $path = $request
+                ->file('surat_izin')
+                ->storePubliclyAs($dir, "surat_izin.{$request->file('surat_izin')->extension()}");
+            $user->surat_izin = Str::of($path)->replace('public', 'storage')->toString();
+        }
+
 
         $user->save();
-        Alert::success('Sukses', 'Silahkan tunggu konfirmasi di email');
+        Alert::success('Sukses', 'Silahkan Login');
         return redirect('/login');
     }
 

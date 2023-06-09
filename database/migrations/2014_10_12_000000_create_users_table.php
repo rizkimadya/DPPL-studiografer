@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('users', function (Blueprint $table) {
             $table->id();
             $table->string('roles');
-            $table->boolean('is_verification')->default(0)->nullable();
+            $table->boolean('is_verification')->default(1)->nullable();
             $table->string('email');
             $table->string('nama_lengkap')->nullable();
             $table->string('no_wa')->nullable();

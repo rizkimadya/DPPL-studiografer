@@ -15,6 +15,15 @@ return new class extends Migration
     {
         Schema::create('transaksis', function (Blueprint $table) {
             $table->id();
+            $table->string('email_user');
+            $table->string('no_telp_user');
+            $table->string('fotografer');
+            $table->string('no_fotografer');
+            $table->string('nama_paket');
+            $table->string('harga');
+            $table->string('tanggal');
+            $table->string('jam');
+            $table->string('status');
             $table->timestamps();
         });
     }

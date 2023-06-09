@@ -13,6 +13,7 @@
                             <input type="file" name="gambar" class="form-control" id="gambar">
                         </div>
                         <input type="hidden" name="nama_fotografer" value="{{ auth()->user()->nama_lengkap }}">
+                        <input type="hidden" name="no_fotografer" value="{{ auth()->user()->no_wa }}">
                         <div class="col-md-6">
                             <div class="mb-3">
                                 <label for="nama_paket" class="form-label">Nama Paket</label>

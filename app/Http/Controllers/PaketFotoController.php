@@ -60,6 +60,7 @@ class PaketFotoController extends Controller
                 'user_id' => $request->user_id,
                 'gambar' => $nama_file,
                 'nama_fotografer' => $request->nama_fotografer,
+                'no_fotografer' => $request->no_fotografer,
                 'nama_paket' => $request->nama_paket,
                 'harga_paket' => $request->harga_paket,
                 'ket_paket' => $request->ket_paket,

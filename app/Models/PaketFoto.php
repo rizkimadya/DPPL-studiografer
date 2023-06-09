@@ -13,6 +13,7 @@ class PaketFoto extends Model
         'user_id',
         'gambar',
         'nama_fotografer',
+        'no_fotografer',
         'nama_paket',
         'harga_paket',
         'ket_paket'
