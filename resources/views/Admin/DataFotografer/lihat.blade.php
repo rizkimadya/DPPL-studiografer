@@ -36,9 +36,8 @@
                                     aria-labelledby="exampleModalLabel" aria-hidden="true">
                                     <div class="modal-dialog modal-dialog-centered" role="document">
                                         <div class="modal-content">
-
                                             <div class="modal-body">
-                                                <img src="/storage/{{ $user->surat_izin }}" width="100%" />
+                                                <img src="/{{ $user->surat_izin }}" width="100%" />
                                             </div>
                                             <div class="modal-footer">
                                                 <button type="button" class="btn btn-warning"
@@ -61,7 +60,7 @@
                                     <div class="modal-dialog modal-dialog-centered" role="document">
                                         <div class="modal-content">
                                             <div class="modal-body">
-                                                <img src="/storage/{{ $user->logo }}" alt="" width="100%" />
+                                                <img src="/{{ $user->logo }}" alt="" width="100%" />
                                             </div>
                                             <div class="modal-footer">
                                                 <button type="button" class="btn btn-warning"

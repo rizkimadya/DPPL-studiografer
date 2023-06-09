@@ -83,32 +83,29 @@ class AuthController extends Controller
         $data->no_wa = $request->no_wa;
         $data->password = Hash::make($request->password);
         $data->alamat = $request->alamat;
-        $data->logo = $request->logo;
-        $data->surat_izin = $request->surat_izin;
-
-        $user = $data;
-
-        $dir = 'File Fotografer/' . $request->nama_lengkap;
 
         if ($request->hasFile('logo')) {
-            $path = $request
-                ->file('logo')
-                ->storePubliclyAs($dir, "logo.{$request->file('logo')->extension()}");
-            $user->logo = Str::of($path)->replace('public', 'storage')->toString();
+            $file = $request->file('logo');
+            $nama_file = time() . "_" . $file->getClientOriginalName();
+            $tujuan_upload = 'fileLogo/';
+            $file->move($tujuan_upload, $nama_file);
+            $data->logo = $tujuan_upload . $nama_file;
         }
 
         if ($request->hasFile('surat_izin')) {
-            $path = $request
-                ->file('surat_izin')
-                ->storePubliclyAs($dir, "surat_izin.{$request->file('surat_izin')->extension()}");
-            $user->surat_izin = Str::of($path)->replace('public', 'storage')->toString();
+            $file = $request->file('surat_izin');
+            $nama_file = time() . "_" . $file->getClientOriginalName();
+            $tujuan_upload = 'fileSuratIzin/';
+            $file->move($tujuan_upload, $nama_file);
+            $data->surat_izin = $tujuan_upload . $nama_file;
         }
 
+        $data->save();
 
-        $user->save();
         Alert::success('Sukses', 'Silahkan Login');
         return redirect('/login');
     }
+
 
     public function loginAuth(Request $request)
     {

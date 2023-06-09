@@ -50,41 +50,43 @@
                         </div>
                     </div>
                 </div>
-                <table class="table table-responsive" id="table1">
-                    <thead>
-                        <tr>
-                            <th>No</th>
-                            <th>Gambar</th>
-                            <th>Tempat Publish</th>
-                            <th class="text-center">Aksi</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @foreach ($galeriFoto as $item)
+                <div class="table-responsive">
+                    <table class="table" id="table1">
+                        <thead>
                             <tr>
-                                <td>{{ $loop->iteration }}</td>
-                                <td>
-                                    <img src="/datagaleriFoto/{{ $item->gambar }}" alt="" height="60px">
-                                </td>
-                                <td>{{ $item->publis }}</td>
-                                <td>
-                                    <div class="d-flex justify-content-center">
-                                        <a href="/galerifoto/edit/{{ $item->id }}"
-                                            class="btn btn-sm btn-primary">Edit</a>
-                                        <form action="/galerifoto/{{ $item->id }}" method="post">
-                                            {{ method_field('DELETE') }}
-                                            {{ csrf_field() }}
-                                            <button type="submit" class="btn btn-danger btn-sm"
-                                                onclick="return confirm(&quot;Confirm delete?&quot;)">
-                                                Hapus
-                                            </button>
-                                        </form>
-                                    </div>
-                                </td>
+                                <th>No</th>
+                                <th>Gambar</th>
+                                <th>Tempat Publish</th>
+                                <th class="text-center">Aksi</th>
                             </tr>
-                        @endforeach
-                    </tbody>
-                </table>
+                        </thead>
+                        <tbody>
+                            @foreach ($galeriFoto as $item)
+                                <tr>
+                                    <td>{{ $loop->iteration }}</td>
+                                    <td>
+                                        <img src="/datagaleriFoto/{{ $item->gambar }}" alt="" height="60px">
+                                    </td>
+                                    <td>{{ $item->publis }}</td>
+                                    <td>
+                                        <div class="d-flex justify-content-center">
+                                            <a href="/galerifoto/edit/{{ $item->id }}"
+                                                class="btn btn-sm btn-primary">Edit</a>
+                                            <form action="/galerifoto/{{ $item->id }}" method="post">
+                                                {{ method_field('DELETE') }}
+                                                {{ csrf_field() }}
+                                                <button type="submit" class="btn btn-danger btn-sm"
+                                                    onclick="return confirm(&quot;Confirm delete?&quot;)">
+                                                    Hapus
+                                                </button>
+                                            </form>
+                                        </div>
+                                    </td>
+                                </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
     </div>

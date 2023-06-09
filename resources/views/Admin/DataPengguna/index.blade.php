@@ -3,8 +3,8 @@
 @section('content')
     <div class="row">
         <div class="col-12">
-            <div class="card p-4">
-                <table class="table table-responsive" id="table1">
+            <div class="card p-4 table-responsive">
+                <table class="table" id="table1">
                     <thead>
                         <tr>
                             <th>No</th>
