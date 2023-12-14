@@ -8,6 +8,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css" />
 </head>
 
 
@@ -136,7 +138,61 @@
                             <p class="jenis-paket">{{ $item->nama_paket }}</p>
                             <p class="harga-paket">Rp
                                 {{ number_format($item->harga_paket, 0, ',', '.') }}</p>
-                            <a href="/paketfoto/detail/{{ $item->id }}" class="btn btn-detail">Lihat Detail</a>
+                            <!-- Button trigger modal -->
+                            <button type="button" class="btn btn-detail" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal{{ $item->id }}">
+                                Lihat Detail
+                            </button>
+
+                            <!-- Modal -->
+                            <div class="modal fade" id="exampleModal{{ $item->id }}" tabindex="-1"
+                                aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h1 class="modal-title fs-5" id="exampleModalLabel">Detail Produk</h1>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="mb-3">
+                                                <label class="form-label">Nama Fotografer</label>
+                                                <input type="text" disabled class="form-control"
+                                                    value="{{ $item->nama_fotografer }}">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label class="form-label">Nomor Fotografer</label>
+                                                <input type="text" disabled class="form-control"
+                                                    value="{{ $item->no_fotografer }}">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label class="form-label">Nama Paket</label>
+                                                <input type="text" disabled class="form-control"
+                                                    value="{{ $item->nama_paket }}">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label class="form-label">Harga Paket</label>
+                                                <input type="text" disabled class="form-control"
+                                                    value="Rp {{ number_format($item->harga_paket, 0, ',', '.') }}">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label class="form-label">Keterangan Paket</label>
+                                                <div class="d-flex">
+                                                    <i class='bx bx-badge-check text-success mt-1 me-1'></i>
+                                                    <p class="subtitle mb-0 text-success">{{ $item->ket_paket }}
+                                                    </p>
+                                                </div>
+                                                <a href="/paketfoto/detail/{{ $item->id }}"
+                                                    class="btn btn-detail w-100">Pesan Paket</a>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary"
+                                                data-bs-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 @endforeach
@@ -209,7 +265,7 @@
                             Beranda</a>
                         <a href="#tentang" class="d-block mb-3"><i class="bi bi-dash-square-fill me-1"></i>
                             Tentang</a>
-                        <a href="#tentang" class="d-block mb-3"><i class="bi bi-camera-reels-fill me-1"></i> Paket
+                        <a href="#paket" class="d-block mb-3"><i class="bi bi-camera-reels-fill me-1"></i> Paket
                             Foto</a>
                         <a href="#momen" class="d-block mb-3"><i class="bi bi-telegram me-1"></i> Momen Foto</a>
                         <a href="#testimoni" class="d-block mb-3"><i class="bi bi-quote"></i> Testimoni</a>
@@ -218,14 +274,16 @@
                 <div class="col-md-4">
                     <p class="title">Sosial Media</p>
                     <div>
-                        <a href="" class="d-block mb-3"><i class="bi bi-instagram me-1"></i>
+                        <a href="https://www.instagram.com/studiografer.id/" class="d-block mb-3"><i
+                                class="bi bi-instagram me-1"></i>
                             Studiografer.id</a>
-                        <a href="" class="d-block mb-3"><i class="bi bi-envelope me-1"></i>
-                            Email@gmail.com</a>
-                        <a href="" class="d-block mb-3"><i class="bi bi-whatsapp me-1"></i> +628236831592</a>
-                        <a href="" class="d-block mb-3"><i class="bi bi-facebook me-1"></i> StudioGrafer</a>
-                        <a href="" class="d-block mb-3"><i class="bi bi-twitter me-1"></i>
-                            Studiografer.ac.id</a>
+                        {{-- <a href="" class="d-block mb-3"><i class="bi bi-envelope me-1"></i>
+                            Email@gmail.com</a> --}}
+                        <a href="#" class="d-block mb-3"><i class="bi bi-whatsapp me-1"></i> +628236831592</a>
+                        <a href="https://www.facebook.com/profile.php?id=100093373329143&mibextid=LQQJ4d"
+                            class="d-block mb-3"><i class="bi bi-facebook me-1"></i> StudioGrafer</a>
+                        {{-- <a href="" class="d-block mb-3"><i class="bi bi-twitter me-1"></i>
+                            Studiografer.ac.id</a> --}}
                     </div>
                 </div>
                 <div class="col-md-4">

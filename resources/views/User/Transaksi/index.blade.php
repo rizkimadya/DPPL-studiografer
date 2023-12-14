@@ -33,7 +33,7 @@
                             <p class="mb-1">{{ $item->status }}</p>
                         </div>
                         <div class="col-12 mt-2">
-                            <a href="https://api.whatsapp.com/send?phone={{ $item->no_fotografer }}&text=Halo%20saya%20ingin%20membuat%20booking%20dengan%20detail%20sebagai%20berikut%3A%0AHarga%3A%20{{ $item->harga }}%0ATanggal%20Booking%3A%20{{ $item->tanggal }}%0AJam%20Booking%3A%20{{ $item->jam }}"
+                            <a href="https://api.whatsapp.com/send?phone=62{{ substr($item->no_fotografer, 1) }}&text=Halo%20saya%20ingin%20membuat%20booking%20Paket%20{{ $item->nama_paket }}%20dengan%20detail%20sebagai%20berikut%3A%0AHarga%3A%20{{ $item->harga }}%0ATanggal%20Booking%3A%20{{ $item->tanggal }}%0AJam%20Booking%3A%20{{ $item->jam }}"
                                 class="btn btn-light w-100 text-success fw-semibold">Hubungi Fotografer</a>
                         </div>
                     </div>
