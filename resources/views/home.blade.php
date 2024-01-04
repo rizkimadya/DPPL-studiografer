@@ -130,72 +130,37 @@
                 </div>
             </div>
 
-            <div class="row mt-5">
+            <div class="row mt-5 d-md-flex flex-md-wrap">
                 @foreach ($paketfoto as $item)
-                    <div class="col-md-4 col-sm-6 mb-3">
-                        <div class="card p-3">
-                            <img src="/gambarPaketFoto/{{ $item->gambar }}" alt="">
-                            <p class="jenis-paket">{{ $item->nama_paket }}</p>
-                            <p class="harga-paket">Rp
-                                {{ number_format($item->harga_paket, 0, ',', '.') }}</p>
-                            <!-- Button trigger modal -->
-                            <button type="button" class="btn btn-detail" data-bs-toggle="modal"
-                                data-bs-target="#exampleModal{{ $item->id }}">
-                                Lihat Detail
-                            </button>
-
-                            <!-- Modal -->
-                            <div class="modal fade" id="exampleModal{{ $item->id }}" tabindex="-1"
-                                aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h1 class="modal-title fs-5" id="exampleModalLabel">Detail Produk</h1>
-                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                aria-label="Close"></button>
-                                        </div>
-                                        <div class="modal-body">
-                                            <div class="mb-3">
-                                                <label class="form-label">Nama Fotografer</label>
-                                                <input type="text" disabled class="form-control"
-                                                    value="{{ $item->nama_fotografer }}">
-                                            </div>
-                                            <div class="mb-3">
-                                                <label class="form-label">Nomor Fotografer</label>
-                                                <input type="text" disabled class="form-control"
-                                                    value="{{ $item->no_fotografer }}">
-                                            </div>
-                                            <div class="mb-3">
-                                                <label class="form-label">Nama Paket</label>
-                                                <input type="text" disabled class="form-control"
-                                                    value="{{ $item->nama_paket }}">
-                                            </div>
-                                            <div class="mb-3">
-                                                <label class="form-label">Harga Paket</label>
-                                                <input type="text" disabled class="form-control"
-                                                    value="Rp {{ number_format($item->harga_paket, 0, ',', '.') }}">
-                                            </div>
-                                            <div class="mb-3">
-                                                <label class="form-label">Keterangan Paket</label>
-                                                <div class="d-flex">
-                                                    <i class='bx bx-badge-check text-success mt-1 me-1'></i>
-                                                    <p class="subtitle mb-0 text-success">{{ $item->ket_paket }}
-                                                    </p>
-                                                </div>
-                                                <a href="/paketfoto/detail/{{ $item->id }}"
-                                                    class="btn btn-detail w-100">Pesan Paket</a>
-                                            </div>
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary"
-                                                data-bs-dismiss="modal">Close</button>
-                                        </div>
-                                    </div>
-                                </div>
+                <div class="col-md-4 col-sm-6 mb-3 d-md-flex">
+                    <div class="card p-md-4 p-3">
+                        <img src="/gambarPaketFoto/{{ $item->gambar }}" alt="">
+                        <p class="jenis-paket">{{ $item->nama_paket }}</p>
+                        <p class="harga-paket">Rp
+                            {{ number_format($item->harga_paket, 0, ',', '.') }}</p>
+                            <div class="mx-auto w-100 d-flex justify-content-center">
+                                <a href="/paketfoto/detail/{{ $item->id }}"
+                                    class="btn mt-4 mb-3" style="background-color:#8ea3f6; color:#fff; width:80%;">Pilih Paket</a>
                             </div>
-                        </div>
+                            <hr>
+                            <span style="font-size: 18px;" class="my-3 fw-bold">Data Fotografer</span>
+                                <div class="mb-2">
+                                    <span class="text-muted" style="font-size: 13px">Nama Fotografer</span>
+                                    <p class="mb-0">{{ $item->nama_fotografer }}</p>
+                                </div>
+                                <div class="mb-2">
+                                    <span class="text-muted" style="font-size: 13px">Nomor Fotografer</span>
+                                    <p class="mb-0">{{ $item->no_fotografer }}</p>
+                                </div>
+                            <span style="font-size: 18px;" class="my-3 fw-bold">Keterangan Paket</span>
+                            <div class="d-flex">
+                                <i class='bx bx-badge-check text-success mt-1 me-1'></i>
+                                <p class="mb-0 text-success">{{ $item->ket_paket }}
+                                </p>
+                            </div>
                     </div>
-                @endforeach
+                </div>
+               @endforeach
             </div>
         </div>
     </section>

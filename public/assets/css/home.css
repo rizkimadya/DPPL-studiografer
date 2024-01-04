@@ -113,6 +113,14 @@ nav .btn-masuk {
     font-weight: 500;
     line-height: 21px;
 }
+#paket .card{
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+#paket  .card:hover {
+    transform: translateY(-10px); /* Atur nilai sesuai dengan keinginan Anda */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Atur nilai sesuai dengan keinginan Anda */
+    border:1px solid #8ea3f6;
+  }
 #paket .card p {
     margin: 0;
 }
